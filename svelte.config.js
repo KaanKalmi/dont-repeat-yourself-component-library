@@ -1,13 +1,28 @@
-import adapter from '@sveltejs/adapter-auto';
+// svelte.config.js
+import adapter from '@sveltejs/adapter-static';
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-	kit: {
-		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
-		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
-		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
-		adapter: adapter()
-	}
+export default {
+  kit: {
+    adapter: adapter(),
+    prerender: {
+      handleHttpError: ({ path, referrer, message }) => {
+        // Suppress the error for the specific path
+        if (path === '/static-web/the-client') {
+          console.warn(`Error suppressed for path: ${path}`);
+          return;
+        }
+
+        // Log the error details for debugging
+        console.error(`Error occurred while prerendering ${path} (linked from ${referrer}): ${message}`);
+
+        // Check if the URL is valid
+        try {
+          new URL(path);
+        } catch (err) {
+          console.error(`Invalid URL: ${path}`);
+          return;
+        }
+      }
+    }
+  }
 };
-
-export default config;

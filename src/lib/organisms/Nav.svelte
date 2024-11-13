@@ -18,12 +18,12 @@
 	
 	const [firstItem, secondItem, thirdItem] = navItems;
 	
-	import logo from '$lib/atoms/HvaLogo.svelte';
+	import Logo from '$lib/atoms/HvaLogo.svelte';
 </script>
 
 <header>
 	<div>
-		<img alt="" src={logo} />
+		<Logo/>
 		<p>Frontend Design & Development</p>
 	</div>
 	<div>
