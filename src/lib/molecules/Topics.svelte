@@ -1,7 +1,7 @@
 <script>
 	import { longDate } from '$lib/utils/date.js';
-	import IconCal from '$lib/components/icons/Calendar.svelte';
-	import IconTopic from '$lib/components/icons/Topic.svelte';
+	import IconCal from '$lib/atoms/Calendar.svelte';
+	import IconTopic from '$lib/atoms/Topic.svelte';
 
 	export let startdate;
 	export let topics;

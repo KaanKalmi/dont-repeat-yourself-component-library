@@ -1,6 +1,6 @@
 <script>
-	import Heading from '$lib/components/Heading.svelte';
-	import SprintLink from '$lib/components/program/SprintLink.svelte';
+	import Heading from '$lib/organisms/Heading.svelte';
+	import SprintLink from '$lib/molecules/SprintLink.svelte';
 
 	export let semester, i;
 </script>

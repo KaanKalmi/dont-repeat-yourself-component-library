@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
-	import Heading from '$lib/components/Heading.svelte';
-	import IconStar from '$lib/components/icons/Star.svelte';
+	import Heading from '$lib/organisms/Heading.svelte';
+	import IconStar from '$lib/atoms/Star.svelte';
 
 	export let tasks;
 	export let stargazer = false;

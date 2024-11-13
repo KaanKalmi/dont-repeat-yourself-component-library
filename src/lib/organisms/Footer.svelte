@@ -1,6 +1,6 @@
 <script>
 	// Aggregate *.fdnd.nl names from github.com/fdnd
-	import logo from '$lib/assets/Creating-logo.png' 
+	import logo from '$lib/atoms/HvaPayoff.svelte' 
 </script>
 
 <footer>

@@ -1,7 +1,7 @@
 <script>
-	import Content from '$lib/components/program/sprint/Content.svelte';
-	import Tasks from '$lib/components/program/sprint/Tasks.svelte';
-	import Schedule from '$lib/components/program/sprint/Schedule.svelte';
+	import Content from '$lib/organisms/ContentSprint.svelte';
+	import Tasks from '$lib/organisms/Tasks.svelte';
+	import Schedule from '$lib/organisms/Schedule.svelte';
 
 	export let data;
 

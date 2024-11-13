@@ -1,6 +1,6 @@
 <script>
-	import Heading from '$lib/components/Heading.svelte';
-	import Topics from './Topics.svelte';
+	import Heading from '$lib/organisms/Heading.svelte';
+	import Topics from '$lib/molecules/Topics.svelte';
 
 	export let title, sprintNumber, content, startdate, topics;
 </script>

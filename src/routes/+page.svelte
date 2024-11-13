@@ -1,6 +1,6 @@
 <script>
-    import Semesters from '$lib/components/program/Semesters.svelte'
-    import Program from '$lib/components/program/Program.svelte'
+    import Semesters from '$lib/organisms/Semesters.svelte'
+    import Program from '$lib/organisms/Program.svelte'
 
     export let data
    

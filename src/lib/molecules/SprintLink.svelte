@@ -1,5 +1,5 @@
 <script>
-	import Heading from '$lib/components/Heading.svelte';
+	import Heading from '$lib/organisms/Heading.svelte';
 	import { prettyDate } from '$lib/utils/date';
 
 	export let semester, sprint, nextSprint;

@@ -1,7 +1,7 @@
 <script>
-    import Heading from '$lib/components/Heading.svelte'
-    import Content from '$lib/components/program/semester/Content.svelte'
-    import SprintLink from '$lib/components/program/SprintLink.svelte'
+    import Heading from '$lib/organisms/Heading.svelte'
+    import Content from '$lib/organisms/ContentSemester.svelte'
+    import SprintLink from '$lib/molecules/SprintLink.svelte'
 
     export let data 
 

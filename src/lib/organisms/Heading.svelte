@@ -1,5 +1,5 @@
 <script>
-	import IconLink from '$lib/components/icons/Link.svelte';
+	import IconLink from '$lib/atoms/Link.svelte';
 	
   	export let title,
 		subtitle = '';

@@ -1,5 +1,5 @@
 <script>
-	import Semester from '$lib/components/program/Semester.svelte';
+	import Semester from '$lib/molecules/Semester.svelte';
 	import { onMount } from 'svelte';
 
 	export let semesters;

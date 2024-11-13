@@ -1,5 +1,5 @@
 <script>
-	import Heading from '$lib/components/Heading.svelte';
+	import Heading from '$lib/organisms/Heading.svelte';
 
 	export let title, content;
 </script>

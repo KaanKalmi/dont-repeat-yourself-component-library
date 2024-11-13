@@ -18,7 +18,7 @@
 	
 	const [firstItem, secondItem, thirdItem] = navItems;
 	
-	import logo from '$lib/assets/HvA-logo.png';
+	import logo from '$lib/atoms/HvaLogo.svelte';
 </script>
 
 <header>
