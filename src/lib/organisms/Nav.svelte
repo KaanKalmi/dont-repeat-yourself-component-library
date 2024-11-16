@@ -62,12 +62,6 @@
 		padding-bottom: 1em;
 	}
 
-	header img {
-		height: 90px;
-		margin-top: 0.2em;
-		margin-right: -1.7em;
-	}
-
 	header p {
 		color: var(--blueberry);
 		border-left: 1px solid var(--blueberry);

@@ -1,13 +1,12 @@
 <script>
 	import IconLink from '$lib/atoms/Link.svelte';
-	
-  	export let title,
-		subtitle = '';
+    
+	export let title,
+	  subtitle = '';
 
-  	let id = title
-		.replace(/[^\w\s]/gi, '')
-		.replace(/\s+/g, '-')
-		.toLowerCase();
+	let id = title
+	  ? title.replace(/[^\w\s]/gi, '').replace(/\s+/g, '-').toLowerCase()
+	  : '';
 </script>
 
 <h2>
@@ -41,16 +40,5 @@
 	h2 > strong {
 		display: block;
 		white-space: nowrap;
-	}
-
-	:global(section.semester h2) { font-size: 1em; }
-
-	@media (min-width: 30em) {
-		:global(section.semester h2) { font-size: clamp(1.15rem, -0.5rem + 1vw, 2.5rem); }
-	}
-
-	:global(section.semester h2 a.anchor) {
-		margin-left: -1em;
-		margin-top: 0.1em;
 	}
 </style>
