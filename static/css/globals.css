@@ -7,16 +7,18 @@
     --attention: #050542;
     --attention-background: #05054233;
     --call-to-action: #fffc86;
-    
     --rounded: .5rem;
     --pilled: 2rem;
     --shadow: .3rem;
-
     --breakpoint-medium: 30em;
 }
 
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../fonts/OpenSans-VariableFont_wdth\,wght.woff2) format('woff2');
+}
 * {
-    font-family: OpenSans, sans-serif;
+    font-family: "Open Sans", sans-serif;
     list-style: none;
 }
 
