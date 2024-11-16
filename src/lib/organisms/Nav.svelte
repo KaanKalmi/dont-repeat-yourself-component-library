@@ -23,7 +23,7 @@
 
 <header>
 	<div>
-		<Logo/>
+		<Logo />
 		<p>Frontend Design & Development</p>
 	</div>
 	<div>

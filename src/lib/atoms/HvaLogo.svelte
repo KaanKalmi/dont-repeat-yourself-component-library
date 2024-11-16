@@ -1,7 +1,6 @@
 <script>
 </script>
 
-
 <div class="hvalogo">
   <div>Frontend <span>Design & Development</span></div>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 182.35 38.63">
@@ -16,17 +15,21 @@
     display: flex;
     flex-flow: row nowrap;
   }
+
   .hvalogo div {
     display: none;
     text-align: right;
   }
+
   span {
     display: block;
     clear: both;
   }
+
   svg {
     height: 100%;
-    fill: var(--color);
+    width: 150px;
+    fill: black;
   }
 
   /* Show the subbrand on the HvA Logo on screens wider than 24rem */
@@ -35,9 +38,8 @@
       display: block;
       margin-right: 1rem;
       padding-right: 1rem;
-      color: var(--color);
+      color: black;
       border-right: 1px solid currentColor;
-
       font-size: 0.8rem;
       line-height: 1rem;
     }

@@ -1,6 +1,6 @@
 <script>
 	// Aggregate *.fdnd.nl names from github.com/fdnd
-	import logo from '$lib/atoms/HvaPayoff.svelte' 
+	import Logo from '$lib/atoms/HvaPayoff.svelte' 
 </script>
 
 <footer>
@@ -32,7 +32,7 @@
 	</nav>
 </footer>
 
-<img alt="Hogeschool van Amsterdam" src={logo} />
+<Logo />
 
 <style>
 	footer {
@@ -40,11 +40,6 @@
 		justify-content: center;
 		font-size: 1rem;
 		padding: 0 0 2rem 0;
-	}
-
-	img {
-		height: 80px;
-		margin-left: 2.2em;
 	}
 
 	h2 {
