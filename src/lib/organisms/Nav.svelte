@@ -52,8 +52,7 @@
 		max-width: var(--max-width);
 		flex-wrap: nowrap;
 		align-items: baseline;
-		justify-content: space-between;
-		margin-left: 2em;
+		justify-content: flex-end;
 	}
 
 	header div:first-of-type {
@@ -76,8 +75,6 @@
 		background-color: var(--grey);
 		color: var(--blueberry);
 		border-radius: 15px 15px 0 0;
-		margin-top: 1em;
-		margin-inline: auto;
 	}
 
 	nav h2 {
@@ -94,17 +91,7 @@
 		bottom: 0;
 		box-shadow: 0.5em 0.5em 0 0 var(--grey);
 	}
-
-	nav::after {
-		content: '';
-		position: absolute;
-		width: 1.5em;
-		aspect-ratio: 1;
-		right: -1.5em;
-		border-radius: 0 0 0 50%;
-		bottom: 0;
-		box-shadow: -0.5em 0.5em 0 0 var(--grey);
-	}
+	
 	nav ul {
 		display: flex;
 		font-weight: 500;

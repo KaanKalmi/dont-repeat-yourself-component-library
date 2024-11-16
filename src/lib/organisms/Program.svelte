@@ -14,7 +14,7 @@
 		position: relative;
 		background-color: var(--grey);
 		color: var(--blueberry);
-		border-radius: 15px 15px 0 0;
+		border-radius: 15px 0 0 0;
 	}
 
     :global(section h2::selection, section p::selection) {
