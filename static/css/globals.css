@@ -15,11 +15,6 @@
     --breakpoint-medium: 30em;
 }
 
-@font-face {
-    font-family: OpenSans;
-    src: url('../fonts/OpenSans-VariableFont_wdth\,wght.ttf')
-}
-
 * {
     font-family: OpenSans, sans-serif;
     list-style: none;
