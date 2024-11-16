@@ -50,7 +50,7 @@
 
 	.fixed-bar {
 		width: 100%;
-		height: 2em;
+		height: .75em;
 		background: var(--lavender);
 		position: sticky;
 		bottom: 0;
@@ -64,7 +64,7 @@
 		aspect-ratio: 1;
 		left: 0;
 		border-radius: 0 0 50% 0;
-		bottom: 2em;
+		bottom: .75em;
 		box-shadow: 0.5em 0.5em 0 0 var(--lavender);
 		transform: rotate(90deg);
 	}
