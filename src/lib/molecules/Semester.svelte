@@ -54,14 +54,14 @@
 		text-transform: uppercase;
 	}
 
-	section.semester > a {
+	/* section.semester > a {
 		color: var(--blueberry);
 		text-decoration: none;
 		display: inline-block;
 		margin: 0 0 0.5rem;
 	}
 
-	section.semester > a:focus { color: var(--blueberry); }
+	section.semester > a:focus { color: var(--blueberry); } */
 
 	ol {
 		list-style: none;
