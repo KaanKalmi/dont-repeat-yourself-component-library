@@ -1,28 +1,17 @@
-// svelte.config.js
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-netlify';
 
 export default {
-  kit: {
-    adapter: adapter(),
-    prerender: {
-      handleHttpError: ({ path, referrer, message }) => {
-        // Suppress the error for the specific path
-        if (path === '/static-web/the-client') {
-          console.warn(`Error suppressed for path: ${path}`);
-          return;
-        }
+	kit: {
+		// default options are shown
+		adapter: adapter({
+			// if true, will create a Netlify Edge Function rather
+			// than using standard Node-based functions
+			edge: false,
 
-        // Log the error details for debugging
-        console.error(`Error occurred while prerendering ${path} (linked from ${referrer}): ${message}`);
-
-        // Check if the URL is valid
-        try {
-          new URL(path);
-        } catch (err) {
-          console.error(`Invalid URL: ${path}`);
-          return;
-        }
-      }
-    }
-  }
+			// if true, will split your app into multiple functions
+			// instead of creating a single one for the entire app.
+			// if `edge` is true, this option cannot be used
+			split: false
+		})
+	}
 };
