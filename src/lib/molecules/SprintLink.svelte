@@ -21,7 +21,7 @@
 {#if sprint.sprintNumber}
     <li class:active class:past>
         <a data-sveltekit-prefetch href="{semester.slug}/{sprint.slug}">
-            <span>Sprint<br>{sprint.sprintNumber}</span>
+            <span>{sprint.sprintNumber}</span>
             <div>
                 <strong>{sprint.title}</strong>
                 <time class="rounded blue-on-green">
@@ -50,22 +50,22 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        font-size: 1rem;
+        font-size: 1.5rem;
         border-radius: 10px;
-        margin-top: 0.5em;
+        margin-top: 0.6em;
         background: var(--lavender);
-        padding: 0.5em;
+		height: 65px;
     }
 
     li a {
         display: flex;
         align-items: center;
         text-decoration: none;
-        color: var(--blueberry);
+        color: black;
         font-size: 1rem;
         border-radius: 10px;
-        transition: 0.1s ease-out background, 0.1s ease-out color;
         position: relative;
+		height: 100%;
     }
 
     li a span {
@@ -73,29 +73,28 @@
         align-items: center;
         justify-content: center;
         text-transform: uppercase;
-        font-weight: 900;
-        font-size: 0.7em;
-        width: 50px;
-        height: 50px;
-        border-radius: 10px;
-        background: white;
-        border: 5px inset var(--lavender);
-        box-sizing: border-box;
+        font-weight: 600;
+        font-size: 1.2em;
+		width: 60px;
+        height: 100%;
         margin-right: 0.5em;
+		border-radius: 10px;
+		background: var(--blueberry);
+		color: white;
+		box-shadow: black 0px 0px 5px;
     }
 
     li a div {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 8em;
-        height: 50px;
-        background: var(--lavender);
+		width: calc(100% - 70px);
+        height: 100%;
         border-radius: 10px;
-        padding-left: 0.25em;
+        padding-left: 0.5em;
     }
 
-    :global(li.past) { opacity: 0.6; }
+    :global(li.past) { opacity: 0.4; }
 
     :global(li.past strong) { font-weight: 500; text-decoration: line-through; }
 
@@ -127,8 +126,8 @@
 
     time {
         border: 0 solid;
-        padding: 0 0.25rem;
-        font-size: 1em;
+        font-size: .9em;
+		font-weight: 400;
         background-color: transparent;
         color: inherit;
     }
