@@ -30,7 +30,7 @@
       on:change={toggleDates}
     />
     <label for="show-hide-dates">
-      <span> Show/hide holidays </span>
+      <span> Show/hide full agenda </span>
     </label>
   {/if}
 
@@ -110,6 +110,7 @@
     font-family: helvetica;
     font-size: 1em;
     margin-left: 3rem;
+    margin-top: .3rem;
   }
 
   input[type="checkbox"].toggle + label::before {
@@ -126,9 +127,9 @@
     position: absolute;
     width: 1.5rem;
     height: 1.5rem;
-    background-color: var(--blueberry);
+    background-color: var(--call-to-action);
     color: var(--blueberry);
-    border: solid 1px var(--blueberry);
+    border: solid 3px var(--blueberry);
     border-radius: var(--pilled);
     font-weight: normal;
     font-size: 0.9em;
@@ -143,25 +144,27 @@
   input[type="checkbox"].toggle:checked + label::after {
     content: "";
     transform: translateX(1.5em);
-    background-color: var(--blueberry);
-    color: var(--blueberry);
+    background: var(--call-to-action);
+    color: var(--call-to-action);
   }
 
   input[type="checkbox"].toggle:hover + label::after,
   input[type="checkbox"].toggle:focus + label::after,
   input[type="checkbox"].toggle:checked:hover + label::after {
-    background-color: var(--blueberry);
-    color: var(--blueberry);
+    background: var(--call-to-action);
+    color: var(--call-to-action);
   }
 
   input[type="checkbox"].toggle:checked + label::before {
     background-color: var(--blueberry);
     opacity: 0.5;
-    border-color: var(--blueberry);
+    border-color: var(--call-to-action);
   }
 
   label span {
     color: var(--blueberry);
-    font-size: 0.7em;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-left: .8rem;
   }
 </style>

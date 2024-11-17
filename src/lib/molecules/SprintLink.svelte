@@ -124,11 +124,15 @@
     display: none;
     padding: 0.25em 0.1em;
     border-radius: 0.5rem;
+    height: 2em;
+    border: none;
   }
 
   li.extra span {
-    font-size: 0.7em;
+    font-size: 0.6em;
+    font-weight: 500;
     line-height: 1.2;
+    margin-left: 1em;
     text-transform: uppercase;
   }
 
@@ -142,10 +146,11 @@
 
   time {
     border: 0 solid;
-    font-size: 0.9em;
-    font-weight: 400;
+    font-size: 0.7em;
+    font-weight: 600;
     background-color: transparent;
     color: inherit;
+    margin-right: 1em;
   }
 
   @media (min-width: 25em) {
