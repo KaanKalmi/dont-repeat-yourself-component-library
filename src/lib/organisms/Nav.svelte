@@ -3,12 +3,12 @@
 
 	let navItems = [
 		{
-			href: "/static-web/the-client",
-			title: "Sprint 2",
+			href: "/static-web/look-and-feel",
+			title: "Sprint 4",
 		},
 		{
-			href: "/workflow-tooling-frameworks/lose-your-head",
-			title: "Sprint 14",
+			href: "/workflow-tooling-frameworks/dont-repeat-yourself",
+			title: "Sprint 16",
 		},
 	];
 
@@ -26,9 +26,7 @@
 			<ul>
 				{#each navItems as item}
 					<li>
-						<a class:active={$page.url.pathname === item.href} href={item.href} target="_self">
-							{item.title}
-						</a>
+						<a class:active={$page.url.pathname === item.href} href={item.href} target="_self" data-sveltekit-preload-data="hover"> {item.title} </a>
 					</li>
 				{/each}
 			</ul>
