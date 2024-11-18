@@ -89,10 +89,16 @@
 		}
 	}
 
-	@media (min-width:380px) and (max-width: 450px) { header{ height: 10vh; } }
-	@media (min-width:450px) { header{ height: 10vh; } }
-	@media (min-width: 1024px) {
+	@media (min-width: 375px) and (max-width: 385px) { header{ height: 16.5vh; } }
+	@media (min-width: 386px) and (max-width: 399px) { header{ height: 13vh; } }
+	@media (min-width: 400px) and (max-width: 430px) { header{ height: 12vh; } }
+	@media (min-width: 430px) and (max-width: 600px) { header{ height: 12vh; } }
+	@media (min-width: 601px) and (max-width: 768px) { header{ height: 10.7vh; } }
+	@media (min-width: 769px) and (max-width: 820px) { header{ height: 9.5vh; } }
+	@media (min-width: 821px) and (max-width: 1024px) { header{ height: 8.15vh; } }
+	@media (min-width: 1025px) {
 		header {
+			height: 10.5vh;
 			div{ font-size: 1em; }
 			
 			nav{
