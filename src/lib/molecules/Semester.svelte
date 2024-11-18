@@ -6,9 +6,9 @@
 </script>
 
 <section class="semester green-on-blue">
-  <!-- <a href="/{semester.slug}"> -->
+  <a href="/{semester.slug}">
   <Heading title="Semester {++i}:" subtitle={semester.title} />
-  <!-- </a> -->
+  </a>
 
   <ol>
     {#each semester.sprints as sprint, index}
