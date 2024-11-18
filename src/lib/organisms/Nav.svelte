@@ -16,138 +16,144 @@
 </script>
 
 <header>
-	<div>
-		<Logo />
-		<p>Frontend Design & Development</p>
-	</div>
-	<a href="/" class="home-btn">FDND</a>
-	<div>
-		<nav>
-			<ul>
-				{#each navItems as item}
-					<li>
-						<a class:active={$page.url.pathname === item.href} href={item.href} target="_self" data-sveltekit-preload-data="hover"> {item.title} </a>
-					</li>
-				{/each}
-			</ul>
-		</nav>
-	</div>
+	<div><Logo /> | Frontend Design & Development</div>
+	<nav>
+		<a href="/" class="home-btn">FDND</a>
+
+		<ul>
+			{#each navItems as item}
+				<li>
+					<a class:active={$page.url.pathname === item.href} href={item.href} target="_self"> {item.title} </a>
+				</li>
+			{/each}
+		</ul>
+	</nav>
 </header>
 
 <style>
-	@media (max-width: 750px) { nav ul { font-size: 0.75em; } }
-	@media (min-width: 22em) { nav { font-size: 1rem; } }
-
 	header {
+		height: 15vh;
+
 		div {
 			display: flex;
-			max-width: var(--max-width);
-			flex-wrap: nowrap;
-			align-items: baseline;
-			justify-content: flex-end;
-		}
-
-		div:first-of-type {
-			justify-content: start;
 			align-items: center;
-			padding-bottom: 1em;
-		}
-
-		p {
-			color: var(--blueberry);
-			border-left: 1px solid var(--blueberry);
-			padding: 0 1em;
-			font-size: 1.2em;
-			letter-spacing: -0.03em;
-		}
-
-		a {
-			position: relative;
-			z-index: 1;
-			padding: 0.75rem;
-			background-color: var(--white);
-			border-radius: 10px;
-			border: 1px solid var(--attention);
-			color: var(--attention);
-			font-weight: 700;
-			text-decoration: none;
-		}
-
-		a::before {
-			content: "";
-			z-index: -10;
-			position: absolute;
+			margin: 0;
 			width: 100%;
-			height: 100%;
-			border: 1px solid var(--attention);
-			background-color: var(--grey);
-			border-radius: 10px;
-			color: var(--attention);
-			right: 4px;
-			top: 4px;
+			height: 2.25em;
+			font-size: 0.95em;
 		}
-	}
 
-	nav::before {
-		content: "";
-		position: absolute;
-		width: 1.5em;
-		aspect-ratio: 1;
-		left: -1.5em;
-		border-radius: 0 0 50% 0;
-		bottom: 0;
-		box-shadow: 0.5em 0.5em 0 0 var(--grey);
-	}
-
-	nav {
-		position: relative;
-		font-size: .95rem;
-		background-color: var(--grey);
-		color: var(--blueberry);
-		padding: 0.75em 0;
-		border-radius: 15px 15px 0 0;
-
-		ul {
+		nav {
 			display: flex;
-			font-weight: 500;
-			padding: 0 3em;
-			gap: 2em;
+			justify-content: space-between;
+			align-items: baseline;
+			background-color: var(--lavender);
 
-			li a:focus-visible, li a:hover {
-				background-color: var(--call-to-action);
-				right: 1px;
-				top: 2px;
-			}
-
-			li a:focus-visible::before, li a:hover::before {
-				background-color: #b1b073;
-				right: 2px;
-				top: 2px;
-			}
-
-			li a.active {
-				background-color: var(--turquoise);
+			.home-btn {
+				text-decoration: none;
 				color: var(--attention);
+				margin-left: 1em;
+				padding: 0.25em 1em;
+				background-color: var(--grey);
+				border-radius: var(--rounded);
+				border: 1px solid var(--attention);
 			}
 
-			li a.active::before {
-				background-color: #56ad93;
-				color: var(--attention);
+			ul::before {
+				content: "";
+				position: absolute;
+				width: 1.5em;
+				aspect-ratio: 1;
+				left: -1.5em;
+				border-radius: 0 0 50% 0;
+				bottom: 0;
+				box-shadow: 0.5em 0.5em 0 0 var(--grey);
 			}
 
-			li a.active:hover, li a.active:focus-visible {
-				background-color: var(--call-to-action);
-				color: var(--attention);
-			}
-			li a.active:hover::before, li a.active:focus-visible::before {
-				background-color: #b1b073;
-				color: var(--attention);
+			ul {
+				position: relative;
+				display: flex;
+				background-color: var(--grey);
+				padding: 1.25em 0.75em;
+				border-radius: 15px 15px 0 0;
+				gap: 0.5em;
+
+				li {
+
+					a {
+						text-decoration: none;
+						color: var(--attention);
+						padding: 0.25em 1em;
+						border: 1px solid var(--attention);
+						border-radius: var(--rounded);
+					}
+
+					a:focus-visible::before, a:hover::before {
+						background-color: #b1b073;
+						right: 2px;
+						top: 2px;
+					}
+
+					a:focus-visible, a:hover {
+						background-color: var(--call-to-action);
+						right: 1px;
+						top: 2px;
+					}
+
+					a.active::before {
+						background-color: #56ad93;
+						color: var(--attention);
+					}
+
+					a.active {
+						background-color: var(--turquoise);
+						color: var(--attention);
+					}
+
+					a.active:hover::before, a.active:focus-visible::before {
+						background-color: #b1b073;
+						color: var(--attention);
+					}
+
+					a.active:hover, a.active:focus-visible {
+						background-color: var(--call-to-action);
+						color: var(--attention);
+					}
+				}
 			}
 		}
 	}
 
-	.home-btn{
-		margin-inline-start: 3em;
-		font-size: 1.5em;
+	@media (375px <= width <= 385px) {header {height: 16.5vh;}}
+	@media (386px <= width <= 399px) {header {height: 13vh;}}
+	@media (400px <= width <= 430px) {header {height: 12vh;}}
+	@media (430px <= width <= 600px) {header {height: 12vh;}}
+	@media (601px <= width <= 768px) {header {height: 10.7vh;}}
+	@media (769px <= width <= 820px) {header {height: 9.5vh;}}
+	@media (821px <= width <= 1024px) {header {height: 8.15vh;}}
+	@media (1025px <= width) {
+		header {
+			height: 10.5vh;
+			div {
+				font-size: 1em;
+			}
+
+			nav {
+				.home-btn {
+					margin-left: 6em;
+					padding: 0.5em 1.25em;
+				}
+
+				ul {
+					padding: 1.25em 1.25em;
+					border-radius: 15px 15px 0 0;
+					gap: 1em;
+
+					a {
+						padding: 0.5em 1.25em;
+					}
+				}
+			}
+		}
 	}
 </style>
