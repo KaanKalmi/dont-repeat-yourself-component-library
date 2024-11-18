@@ -78,6 +78,20 @@
 					right: 1px;
 					top: 1px;
 				}
+
+				a::before {
+					content: "";
+					z-index: -1;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					border: 1px solid var(--attention);
+					background-color: var(--grey);
+					border-radius: var(--rounded);
+					color: var(--attent);
+					right: 2px;
+					top: 2px;
+				}
 			}
 		}
 	}
