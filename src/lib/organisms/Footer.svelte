@@ -1,5 +1,4 @@
 <script>
-	// Aggregate *.fdnd.nl names from github.com/fdnd
 	import Logo from '$lib/atoms/HvaPayoff.svelte' 
 </script>
 
@@ -38,52 +37,66 @@
 	footer {
 		display: flex;
 		justify-content: center;
-		font-size: 1rem;
-		padding: 0 0 2rem 0;
-	}
-
-	h2 {
-		margin: 0;
-	}
-
-	p {
-		margin: 0 0 1em 0;
-		max-width: 58ch;
-	}
-
-	ul {
-		padding: 0;
-		margin: 0;
-		display: flex;
 		flex-wrap: wrap;
-		max-width: 30em;
+		font-size: .8em;
+		padding: 0 0 2em 0;
+
+		h2 { margin: 0; }
+
+		p {
+			margin: 0 0 1em 0;
+			max-width: 75ch;
+		}
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0;
+			margin: 0;
+
+			li { padding: 0.5em 0.25em; 
+
+				a {
+					position: relative;
+					color: var(--blueberry);
+					font-weight: 700;
+					padding: 0.25em 0.5em;
+					border: 1px solid var(--blueberry);
+					border-radius: var(--rounded);
+					text-decoration: none;
+					background: var(--white);
+				}
+				a:focus-visible, a:hover {
+					background-color: var(--call-to-action);
+					right: 1px;
+					top: 1px;
+					transition: all .4s ease-out;
+				}
+
+				a:focus-visible::before, a:hover::before {
+					background-color: #b1b073;
+					right: 1px;
+					top: 1px;
+				}
+			}
+		}
 	}
 
-	ul li {
-		padding: 0.7em 0.2em;
-	}
+	@media (min-width: 720px){
+		footer {
+			flex-wrap: nowrap;
 
-	ul li a {
-		position: relative;
-		color: var(--blueberry);
-		font-weight: 700;
-		padding: 0.4em 0.6em;
-		border: 1px solid var(--blueberry);
-		border-radius: var(--rounded);
-		text-decoration: none;
-		background: var(--white);
-	}
+			p {
+				margin: 0 0 1em 0;
+				max-width: 75ch;
+			}
 
-	li a:focus-visible, li a:hover {
-		background-color: var(--call-to-action);
-		right: 1px;
-        top: 1px;
-		transition: all .4s ease-out;
-	}
+			ul { max-width: 30em;
 
-	li a:focus-visible::before, li a:hover::before {
-		background-color: #b1b073;
-		right: 1px;
-    	top: 1px;
+				li { padding: 0.7em 0.2em;
+					a { padding: 0.4em 0.6em; }
+				}
+			}
+		}
 	}
 </style>
