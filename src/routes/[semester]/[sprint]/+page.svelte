@@ -20,7 +20,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1.5rem;
-		margin-top: 1.5rem;
 	}
 
 	:global(section) {
@@ -44,7 +43,6 @@
 
 	@media (min-width: 40em) {
 		div {
-			margin: 2rem 0 1.5rem;
 			flex-direction: row;
 			align-items: stretch;
 		}

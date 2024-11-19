@@ -82,43 +82,49 @@
 {/if}
 
 <style>
-	section {
-		position: relative;
-		margin-top: 0.5rem;
-	}
+	div{
+		background-color: var(--grey);
 
-	small {
-		font-size: 0.7em;
-	}
-
-	section.tasks {
-		max-width: 42rem;
-		padding: 1rem;
-	}
-	section.tasks a {
-		text-transform: capitalize;
-		display: flex;
-		flex-wrap: nowrap;
-		justify-content: flex-start;
-		align-items: center;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		overflow: hidden;
-	}
-
-	section.tasks small {
-		margin-left: 0.25rem;
-		padding: 0 0.1rem;
-		transform: translateY(-5px);
-		white-space: nowrap;
-	}
-    
-	section.tasks p {
-		display: flex;
-		align-items: flex-end;
-		justify-content: space-between;
-	}
+		section {
+			position: relative;
+			background-color: var(--grey);
+			border: 2px solid var(--turquoise);
+			border-radius: var(--rounded);
+			box-shadow: -4px 4px var(--lavender);
+		}
 		
+		small {
+			font-size: 0.7em;
+		}
+
+		section.tasks {
+			max-width: 42rem;
+			padding: 1rem;
+		}
+		section.tasks a {
+			text-transform: capitalize;
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-items: center;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+
+		section.tasks small {
+			margin-left: 0.25rem;
+			padding: 0 0.1rem;
+			transform: translateY(-5px);
+			white-space: nowrap;
+		}
+		
+		section.tasks p {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+		}
+	}
 
 	@media (max-width: 750px) {
 		section.tasks {

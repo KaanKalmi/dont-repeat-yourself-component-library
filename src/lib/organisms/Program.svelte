@@ -4,9 +4,11 @@
 	export let title, content;
 </script>
 
-<section class="rounded col-span-2">
-	<Heading {title} />
-	{@html content.html}
+<section>
+	<div>
+		<Heading {title} />
+		{@html content.html}
+	</div>
 </section>
 
 <style>
@@ -15,6 +17,15 @@
 		background-color: var(--grey);
 		color: var(--blueberry);
 		border-radius: 15px 0 0 0;
+		padding: 1em;
+
+		div{
+			width: max-content;
+			padding-bottom: .5em;
+			border: 2px solid var(--turquoise);
+    		border-radius: var(--rounded);
+			box-shadow: -4px 4px var(--lavender);
+		}
 	}
 
     :global(section h2::selection, section p::selection) {
@@ -24,11 +35,11 @@
 
 	:global(section h2) {
 		font-size: 2.25rem;
-		padding: 3rem 0 0.5rem 3rem;
+		padding: .25em;
 	}
 
 	:global(section p) {
-		padding: 0 3em;
+		padding: 0 .75em;
 		font-size: 1rem;
 		margin: 0;
 		max-width: 65ch;
