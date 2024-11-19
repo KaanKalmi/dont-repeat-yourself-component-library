@@ -17,10 +17,9 @@
 		background-color: var(--grey);
 		color: var(--blueberry);
 		border-radius: 15px 0 0 0;
-		padding: 1em;
+		padding: 3rem 1.25rem 2rem;
 
 		div{
-			width: max-content;
 			padding-bottom: .5em;
 			border: 2px solid var(--turquoise);
     		border-radius: var(--rounded);
@@ -45,4 +44,10 @@
 		max-width: 65ch;
 		letter-spacing: -0.04em;
 	}
+	@media (1025px <= width) { 
+		section{
+			padding: 4rem 3.25rem 2rem;
+			div { width: max-content; }
+			}
+		}
 </style>

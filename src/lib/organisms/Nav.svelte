@@ -38,7 +38,6 @@
 		div {
 			display: flex;
 			align-items: center;
-			margin: 0 .75em;
 			width: 100%;
 			height: 2.25em;
 			font-size: 0.95em;
@@ -46,19 +45,21 @@
 
 		nav {
 			display: flex;
-			justify-content: space-between;
+			justify-content: right;
 			align-items: baseline;
 			background-color: var(--lavender);
-
+			font-weight: 600;
+			
 			.home-btn {
 				text-decoration: none;
-				color: var(--attention);
-				margin-left: 1em;
+				color: var(--blueberry);
+				background-color: var(--white);
+				margin-right: 1em;
 				padding: 0.25em 1em;
-				background-color: var(--grey);
+				border: 2px solid var(--turquoise);
 				border-radius: var(--rounded);
-				border: 1px solid var(--attention);
 			}
+
 
 			ul::before {
 				content: "";
@@ -75,50 +76,25 @@
 				position: relative;
 				display: flex;
 				background-color: var(--grey);
-				padding: 1.25em 0.75em;
+				padding: 1.25em 1.25em;
 				border-radius: 15px 15px 0 0;
-				gap: 0.5em;
+				gap: 1em;
 
 				li {
-
 					a {
 						text-decoration: none;
-						color: var(--attention);
+						color: var(--blueberry);
 						padding: 0.25em 1em;
-						border: 1px solid var(--attention);
+						border: 2px solid var(--turquoise);
 						border-radius: var(--rounded);
+						box-shadow: -4px 4px var(--lavender);
 					}
 
-					a:focus-visible::before, a:hover::before {
-						background-color: #b1b073;
-						right: 2px;
-						top: 2px;
-					}
+					a:focus-visible, a:hover { background-color: var(--turquoise); }
 
-					a:focus-visible, a:hover {
-						background-color: var(--call-to-action);
-						right: 1px;
-						top: 2px;
-					}
-
-					a.active::before {
-						background-color: #56ad93;
-						color: var(--attention);
-					}
-
-					a.active {
+					a.active, a.active:focus-visible, a.active:hover {
 						background-color: var(--turquoise);
-						color: var(--attention);
-					}
-
-					a.active:hover::before, a.active:focus-visible::before {
-						background-color: #b1b073;
-						color: var(--attention);
-					}
-
-					a.active:hover, a.active:focus-visible {
-						background-color: var(--call-to-action);
-						color: var(--attention);
+						color: var(--blueberry);
 					}
 				}
 			}
@@ -141,14 +117,14 @@
 			nav {
 
 				.home-btn {
-					margin-left: 6em;
+					margin-right: 2em;
 					padding: 0.5em 1.25em;
 				}
 
 				ul {
-					padding: 1.25em 1.25em;
+					padding: 1.25em 2.25em;
 					border-radius: 15px 15px 0 0;
-					gap: 1em;
+					gap: 2em;
 
 					a { padding: 0.5em 1.25em; }
 				}
