@@ -44,8 +44,8 @@
 {/if}
 
 <style>
-  a:focus {
-    background-color: transparent;
+  a:focus, a:hover { 
+    background-position: left bottom;
   }
 
   li {
@@ -53,11 +53,13 @@
     align-items: center;
     justify-content: flex-start;
     font-size: 1.5rem;
-    border: 4px solid var(--lavender);
-    border-radius: 10px;
+    border: 2px solid var(--turquoise);
+    border-radius: var(--rounded);
+		box-shadow: -4px 4px var(--lavender);
     margin-top: 0.6em;
     background: var(--white);
     height: 65px;
+    overflow: hidden;
   }
 
   li a {
@@ -66,9 +68,13 @@
     text-decoration: none;
     color: black;
     font-size: 1rem;
-    border-radius: 10px;
     position: relative;
     height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, var(--turquoise) 50%, var(--white) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .75s ease-in; 
   }
 
   li a span {
@@ -80,12 +86,11 @@
     font-size: 1.2em;
     width: 60px;
     height: 100%;
-    margin-right: 0.5em;
-    border-radius: 10px;
+    margin-left: -0.25em;
+    border-radius: var(--rounded);
+    border: 2px solid var(--turquoise);
     background: var(--white);
     color: var(--lavender);
-    box-shadow: white 5px 0px 7px;
-    border: 4px solid var(--turquoise);
   }
 
   li a div {
@@ -98,21 +103,18 @@
     padding-left: 0.5em;
   }
 
-  :global(li.past) {
-    opacity: 0.4;
-  }
+  :global(li.past) { opacity: 0.4; }
 
   :global(li.past strong) {
     font-weight: 500;
     text-decoration: line-through;
   }
 
-  :global(li.past time) {
+  :global(li.past time), :global(li.extra.past span) {
     text-decoration: line-through;
   }
 
-  li a,
-  li > span {
+  li a, li > span {
     display: flex;
     white-space: nowrap;
     overflow: hidden;
@@ -123,26 +125,23 @@
   li.extra {
     display: none;
     padding: 0.25em 0.1em;
-    border-radius: 0.5rem;
+    border-radius: var(--rounded);
     height: 2em;
-    border: none;
+    border: 2px solid var(--lavender);
+    box-shadow: -4px 4px var(--turquoise);
   }
 
   li.extra span {
-    font-size: 0.6em;
+    font-size: 0.5em;
     font-weight: 500;
     line-height: 1.2;
-    margin-left: 1em;
+    margin-left: .5em;
     text-transform: uppercase;
   }
 
-  li.extra time {
-    color: inherit;
-  }
+  li.extra time { color: inherit;}
 
-  :global(body.expand) li.extra {
-    display: flex;
-  }
+  :global(body.expand) li.extra { display: flex; justify-content: space-between;}
 
   time {
     border: 0 solid;
@@ -153,10 +152,5 @@
     margin-right: 1em;
   }
 
-  @media (min-width: 25em) {
-    li a,
-    li span {
-      width: 82%;
-    }
-  }
+  @media (min-width: 25em) { li a, li span { width: 100%; } }
 </style>

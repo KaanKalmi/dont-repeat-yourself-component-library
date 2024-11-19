@@ -5,7 +5,8 @@
   export let title, sprintNumber, content, startdate, topics;
 </script>
 
-<section class="rounded">
+<section>
+<article>
   <Heading title="Sprint {sprintNumber}: {title}" />
   <Topics {startdate} {topics} />
 
@@ -14,28 +15,37 @@
       {@html content.html}
     {/if}
   </div>
+</article>
 </section>
 
 <style>
-  section {
-    position: relative;
-    height: 100%;
-    width: 100%;
+  section{
     background-color: var(--grey);
-    color: black;
-    border: 1px solid var(--turquoise);
-    border-radius: var(--rounded);
-    margin-left: var(--shadow);
-    min-height: 18rem;
-    max-width: 35em;
-    padding: 1em;
+    width: 100%;
+    border-radius: 15px 0 0 0;
+    
+    article {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background-color: var(--grey);
+      color: black;
+      width: max-content;
+      border: 2px solid var(--turquoise);
+      border-radius: var(--rounded);
+      box-shadow: -4px 4px var(--lavender);
+      margin-left: var(--shadow);
+      min-height: 18rem;
+      max-width: 35em;
+      padding: 1em;
+    }
   }
 
-  section div {
-    margin-top: 1.5rem;
-  }
+  article div {
+      margin-top: 1.5rem;
+    }
 
-  :global(section p) {
+  :global(article p) {
     font-size: 1rem;
   }
 

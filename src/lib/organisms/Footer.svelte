@@ -72,16 +72,15 @@
           text-decoration: none;
           background: var(--white);
         }
-        a:focus-visible,
-        a:hover {
+        
+        a:focus-visible, a:hover {
           background-color: var(--call-to-action);
           right: 1px;
           top: 1px;
           transition: all 0.4s ease-out;
         }
 
-        a:focus-visible::before,
-        a:hover::before {
+        a:focus-visible::before, a:hover::before {
           background-color: #b1b073;
           right: 1px;
           top: 1px;
