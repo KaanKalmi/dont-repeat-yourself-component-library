@@ -133,9 +133,9 @@
 
   li.extra span {
     font-size: 0.5em;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.2;
-    margin-left: .5em;
+    margin-left: 1.75em;
     text-transform: uppercase;
   }
 
