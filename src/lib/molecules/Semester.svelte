@@ -6,9 +6,9 @@
 </script>
 
 <section class="semester green-on-blue">
-  <!-- <a href="/{semester.slug}"> -->
+  <a href="/{semester.slug}">
   <Heading title="Semester {++i}:" subtitle={semester.title} />
-  <!-- </a> -->
+  </a>
 
   <ol>
     {#each semester.sprints as sprint, index}
@@ -25,13 +25,13 @@
 
 <style>
   section.semester {
-		padding: 0;
-		margin: 0 1.5rem 0 0;
-		scroll-margin: 1rem;
+    padding: 0;
+    margin: 0 1.5rem 0 0;
+    scroll-margin: 1rem;
 
-		border: none;
-		scroll-snap-align: start;
-	}
+    border: none;
+    scroll-snap-align: start;
+  }
 
   @media (max-width: 750px) {
     section.semester {
