@@ -20,7 +20,7 @@
 		padding: 3rem 1.25rem 2rem;
 
 		div{
-			padding-bottom: .5em;
+			padding: 1.25em;
 			border: 2px solid var(--turquoise);
     		border-radius: var(--rounded);
 			box-shadow: -4px 4px var(--lavender);
