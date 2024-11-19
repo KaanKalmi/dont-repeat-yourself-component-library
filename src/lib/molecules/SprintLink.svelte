@@ -85,7 +85,7 @@
     background: var(--white);
     color: var(--lavender);
     box-shadow: white 5px 0px 7px;
-    border: 4px solid var(--lavender);
+    border: 4px solid var(--turquoise);
   }
 
   li a div {

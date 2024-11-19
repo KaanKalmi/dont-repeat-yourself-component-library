@@ -23,22 +23,36 @@
     list-style: none;
 }
 
-*::-webkit-scrollbar { display: none; }
+*::-webkit-scrollbar {
+    display: none;
+}
 
-body { overflow-x:hidden; }
+body {
+    overflow-x: hidden;
+}
 
-h2 { margin-left:1.5rem;}
+h2 {
+    margin-left: 1.5rem;
+}
 
-footer { margin-top: 2rem; }
+footer {
+    margin-top: 2rem;
+}
 
-footer nav h2 { margin:calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem }
+footer nav h2 {
+    margin: calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem
+}
 
-::marker { color: currentColor; }
+::marker {
+    color: currentColor;
+}
 
-section a { padding:0 .25rem }
+section a {
+    padding: 0 .25rem
+}
 
 a:focus {
-    outline:none;
-    background: var(--attention);  
+    outline: none;
+    background: var(--attention);
     color: var(--white);
 }
