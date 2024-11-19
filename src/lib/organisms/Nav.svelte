@@ -33,11 +33,12 @@
 <style>
 	header {
 		height: 15vh;
+		padding-top: .5em;
 
 		div {
 			display: flex;
 			align-items: center;
-			margin: 0;
+			margin: 0 .75em;
 			width: 100%;
 			height: 2.25em;
 			font-size: 0.95em;
@@ -133,12 +134,12 @@
 	@media (821px <= width <= 1024px) {header {height: 8.15vh;}}
 	@media (1025px <= width) {
 		header {
-			height: 10.5vh;
-			div {
-				font-size: 1em;
-			}
+			height: 10.85vh;
+
+			div { font-size: 1em; }
 
 			nav {
+
 				.home-btn {
 					margin-left: 6em;
 					padding: 0.5em 1.25em;
@@ -149,9 +150,7 @@
 					border-radius: 15px 15px 0 0;
 					gap: 1em;
 
-					a {
-						padding: 0.5em 1.25em;
-					}
+					a { padding: 0.5em 1.25em; }
 				}
 			}
 		}
