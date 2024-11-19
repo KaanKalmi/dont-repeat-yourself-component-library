@@ -44,10 +44,11 @@
 		max-width: 65ch;
 		letter-spacing: -0.04em;
 	}
-	@media (1025px <= width) { 
+	@media (601px <= width) { 
 		section{
-			padding: 4rem 3.25rem 2rem;
+			padding: 4rem 2.25rem 2rem;
 			div { width: max-content; }
 			}
 		}
+		@media (1024px <= width) { section{ padding: 4rem 3.25rem 2rem; } }
 </style>

@@ -76,15 +76,15 @@
 				position: relative;
 				display: flex;
 				background-color: var(--grey);
-				padding: 1.25em 1.25em;
+				padding: 1.25em 1em;
 				border-radius: 15px 15px 0 0;
-				gap: 1em;
+				gap: .5em;
 
 				li {
 					a {
 						text-decoration: none;
 						color: var(--blueberry);
-						padding: 0.25em 1em;
+						padding: 0.25em .5em;
 						border: 2px solid var(--turquoise);
 						border-radius: var(--rounded);
 						box-shadow: -4px 4px var(--lavender);

@@ -139,9 +139,9 @@
     text-transform: uppercase;
   }
 
-  li.extra time { color: inherit; }
+  li.extra time { color: inherit;}
 
-  :global(body.expand) li.extra { display: flex; }
+  :global(body.expand) li.extra { display: flex; justify-content: space-between;}
 
   time {
     border: 0 solid;

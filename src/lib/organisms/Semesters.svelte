@@ -173,10 +173,11 @@
     margin-left: 0.8rem;
   }
 
-  @media (1025px <= width) { 
+  @media (601px <= width) { 
   h2 {
     margin: 0;
-    padding: 3rem 3.25rem 2rem;
+    padding: 3rem 2.25rem 2rem;
   }
 }
+@media (1024px <= width) { h2{ padding: 4rem 3.25rem 2rem; } }
 </style>
