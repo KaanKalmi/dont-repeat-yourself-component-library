@@ -74,7 +74,7 @@
     background: linear-gradient(to right, var(--turquoise) 50%, var(--white) 50%);
     background-size: 200% 100%;
     background-position: right bottom;
-    transition: all .75s ease-in; 
+    transition: all .3s ease-in; 
   }
 
   li a span {

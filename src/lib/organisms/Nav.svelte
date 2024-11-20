@@ -110,7 +110,7 @@
 	@media (821px <= width <= 1024px) {header {height: 8.15vh;}}
 	@media (1025px <= width) {
 		header {
-			height: 10.85vh;
+			height: 12.65vh;
 
 			div { font-size: 1em; }
 
