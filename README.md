@@ -5,7 +5,8 @@ Het programma van FDND is te bekijken op https://programma.fdnd.nl/. Hier is inf
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f528383e-83eb-43c4-8b8e-f88b2e079608/deploy-status)](https://app.netlify.com/sites/hilarious-gumdrop-9fd223/deploys)
 
 ## Screenshot
-De website live bekijken kan ook! Klik hiervoor op de link: [https://fdnd-programma.netlify.app/](https://fdnd-programma-s16.netlify.app/)  > DIT WERKT NIET
+De website live bekijken kan ook! Klik hiervoor op de link: [https://fdnd-programma.netlify.app/](https://fdnd-programma-s16.netlify.app/)  
+> DIT WERKT NIET
 
 ![image](https://github.com/user-attachments/assets/2a4d2efe-84f9-43ca-b9de-3f3e553d4c23)
 
