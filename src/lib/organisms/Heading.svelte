@@ -16,9 +16,6 @@
 </script>
 
 <h2>
-	<a {id} href="#{id}" class="anchor" aria-hidden="true">
-		<IconLink />
-	</a>
 	<span>
 		{title}
 	</span>
