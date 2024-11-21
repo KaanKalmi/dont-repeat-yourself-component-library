@@ -44,7 +44,8 @@
 {/if}
 
 <style>
-  a:focus, a:hover { 
+  a:focus,
+  a:hover {
     background-position: left bottom;
   }
 
@@ -55,10 +56,11 @@
     font-size: 1.5rem;
     border: 2px solid var(--turquoise);
     border-radius: var(--rounded);
-		box-shadow: -4px 4px var(--lavender);
+    box-shadow: -4px 4px var(--lavender);
     margin-top: 0.6em;
     background: var(--white);
-    height: 65px;
+    width: 100%;
+    height: 5rem;
     overflow: hidden;
   }
 
@@ -71,10 +73,14 @@
     position: relative;
     height: 100%;
     width: 100%;
-    background: linear-gradient(to right, var(--turquoise) 50%, var(--white) 50%);
+    background: linear-gradient(
+      to right,
+      var(--turquoise) 50%,
+      var(--white) 50%
+    );
     background-size: 200% 100%;
     background-position: right bottom;
-    transition: all .75s ease-in; 
+    transition: all 0.75s ease-in;
   }
 
   li a span {
@@ -103,18 +109,22 @@
     padding-left: 0.5em;
   }
 
-  :global(li.past) { opacity: 0.4; }
+  :global(li.past) {
+    opacity: 0.4;
+  }
 
   :global(li.past strong) {
     font-weight: 500;
     text-decoration: line-through;
   }
 
-  :global(li.past time), :global(li.extra.past span) {
+  :global(li.past time),
+  :global(li.extra.past span) {
     text-decoration: line-through;
   }
 
-  li a, li > span {
+  li a,
+  li > span {
     display: flex;
     white-space: nowrap;
     overflow: hidden;
@@ -139,9 +149,14 @@
     text-transform: uppercase;
   }
 
-  li.extra time { color: inherit;}
+  li.extra time {
+    color: inherit;
+  }
 
-  :global(body.expand) li.extra { display: flex; justify-content: space-between;}
+  :global(body.expand) li.extra {
+    display: flex;
+    justify-content: space-between;
+  }
 
   time {
     border: 0 solid;
@@ -152,5 +167,10 @@
     margin-right: 1em;
   }
 
-  @media (min-width: 25em) { li a, li span { width: 100%; } }
+  @media (min-width: 25em) {
+    li a,
+    li span {
+      width: 100%;
+    }
+  }
 </style>

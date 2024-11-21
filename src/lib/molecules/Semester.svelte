@@ -73,16 +73,4 @@
     padding: 1rem;
     width: 100%;
   }
-
-  @media (min-width: 50rem) {
-    section.semester {
-      scroll-margin: 2rem;
-    }
-  }
-
-  @media (min-width: 25em) {
-    ol {
-      width: 21rem;
-    }
-  }
 </style>
