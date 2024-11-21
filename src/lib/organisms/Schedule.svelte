@@ -129,17 +129,20 @@
   }
 
   .week {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
   }
 
   .day {
-    border: 1px solid var(--turquoise);
+    border: 2px solid var(--turquoise);
     border-radius: var(--rounded);
     padding: 1rem;
     background: var(--white);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: -4px 4px var(--lavender);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   .weekday {
@@ -189,82 +192,15 @@
     --border: var(--call-to-action);
   }
 
-  @media (min-width: 40rem) {
-    section > :global(h2) {
-      padding-left: 1rem;
-    }
-
-    .day div {
-      margin-left: 0;
-    }
-  }
-
-  @media (min-width: 50rem) {
-    section > :global(h2) {
-      padding-left: 2rem;
-    }
-
-    section {
-      margin: 1rem -1rem;
-    }
-  }
-
-  @media (min-width: 47rem) {
-    .week-container {
-      overflow-x: auto;
-      padding: 2rem 1rem 2rem;
-    }
-
+  @media (min-width: 630px) {
     .week {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1rem;
-    }
-
-    h3 {
-      margin-left: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1em;
     }
 
     .day {
-      aspect-ratio: 1;
-      border-radius: var(--rounded);
-      border: 2px solid var(--turquoise);
-      width: max(270px, calc(100vw / 24 * 4));
-      padding: 1rem;
-      box-shadow: -4px 4px var(--lavender);
-    }
-
-    .day + .day {
-      margin-top: 0;
-    }
-
-    .weekday {
-      text-align: right;
-      margin: 0 0 1rem;
-      border: none;
-    }
-  }
-
-  @media (min-width: 90rem) {
-    section > :global(h2) {
-      padding-left: 1rem;
-    }
-
-    section {
-      margin: 2rem 0;
-    }
-
-    .week-container {
-      overflow: visible;
-      padding: 1rem 0 0;
-    }
-
-    .week-container + .week-container {
-      padding: 2rem 0 0;
-    }
-
-    .day {
-      width: calc((var(--max-width) - 4rem) / 5);
+      min-height: 17em;
     }
   }
 </style>
