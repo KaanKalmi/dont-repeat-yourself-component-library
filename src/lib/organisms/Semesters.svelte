@@ -4,7 +4,7 @@
 
   let { semesters, subtitle } = $props();
 
-  let jsEnabled = $state(false);
+  let jsEnabled = $state(true);
 
   function toggleDates({ target }) {
     if (target.nodeName == "INPUT") {
@@ -121,7 +121,6 @@
     width: 100%;
     padding: 0;
     background: var(--grey);
-    border-radius: 0 0 15px 15px;
     color: var(--blueberry);
   }
 
