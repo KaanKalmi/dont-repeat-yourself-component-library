@@ -14,6 +14,7 @@
   .hvalogo {
     display: flex;
     flex-flow: row nowrap;
+    container-type: inline-size;
   }
 
   .hvalogo div {
