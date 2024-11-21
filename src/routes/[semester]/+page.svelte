@@ -3,7 +3,7 @@
     import Content from '$lib/organisms/ContentSemester.svelte'
     import SprintLink from '$lib/molecules/SprintLink.svelte'
 
-    export let data 
+    let { data } = $props();
 
     const semester = data
 </script>

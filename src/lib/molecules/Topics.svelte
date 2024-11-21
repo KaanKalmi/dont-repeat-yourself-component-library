@@ -3,8 +3,7 @@
   import IconCal from "$lib/atoms/Calendar.svelte";
   import IconTopic from "$lib/atoms/Topic.svelte";
 
-  export let startdate;
-  export let topics;
+  let { startdate, topics } = $props();
 </script>
 
 <aside>

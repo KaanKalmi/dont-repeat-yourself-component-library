@@ -2,13 +2,13 @@
   import Heading from "$lib/organisms/Heading.svelte";
   import SprintLink from "$lib/molecules/SprintLink.svelte";
 
-  export let semester, i;
+  let { semester, i = $bindable() } = $props();
 </script>
 
 <section class="semester green-on-blue">
-  <!-- <a href="/{semester.slug}"> -->
+  <a href="/{semester.slug}">
   <Heading title="Semester {++i}:" subtitle={semester.title} />
-  <!-- </a> -->
+  </a>
 
   <ol>
     {#each semester.sprints as sprint, index}
@@ -58,14 +58,14 @@
     text-transform: uppercase;
   }
 
-  /* section.semester > a {
+  section.semester > a {
 		color: var(--blueberry);
 		text-decoration: none;
 		display: inline-block;
 		margin: 0 0 0.5rem;
 	}
 
-	section.semester > a:focus { color: var(--blueberry); } */
+	section.semester > a:focus { color: var(--blueberry); } 
 
   ol {
     list-style: none;

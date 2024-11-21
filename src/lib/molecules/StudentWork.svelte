@@ -1,7 +1,13 @@
 <script>
     import Heading from '$lib/components/Heading.svelte'
     import IconStar from '$lib/atoms/Star.svelte';
-    export let stargazer = false;
+	/**
+	 * @typedef {Object} Props
+	 * @property {boolean} [stargazer]
+	 */
+
+	/** @type {Props} */
+	let { stargazer = $bindable(false) } = $props();
 	if (tasks) {
 		tasks.forEach((task) => {
 			if (!stargazer && task.forks && task.forks.length > 0) {
