@@ -3,7 +3,7 @@
 	import Tasks from '$lib/organisms/Tasks.svelte';
 	import Schedule from '$lib/organisms/Schedule.svelte';
 
-	export let data;
+	let { data } = $props();
 
 	const {title, sprintNumber, startdate, content, weekPlans, topics, tasks } = data
 </script>

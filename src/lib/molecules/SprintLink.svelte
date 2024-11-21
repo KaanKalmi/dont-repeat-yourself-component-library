@@ -2,7 +2,7 @@
   import Heading from "$lib/organisms/Heading.svelte";
   import { prettyDate } from "$lib/utils/date";
 
-  export let semester, sprint, nextSprint;
+  let { semester, sprint, nextSprint } = $props();
   const today = new Date();
   const sprintDate = new Date(sprint.startdate);
   let nextSprintDate = false;
@@ -10,8 +10,8 @@
     nextSprintDate = new Date(nextSprint.startdate);
   }
 
-  let active = today >= sprintDate;
-  let past = false;
+  let active = $state(today >= sprintDate);
+  let past = $state(false);
   if (nextSprintDate && active) {
     active = today < nextSprintDate;
     past = today > nextSprintDate;
@@ -74,7 +74,7 @@
     background: linear-gradient(to right, var(--turquoise) 50%, var(--white) 50%);
     background-size: 200% 100%;
     background-position: right bottom;
-    transition: all .75s ease-in; 
+    transition: all .3s ease-in; 
   }
 
   li a span {

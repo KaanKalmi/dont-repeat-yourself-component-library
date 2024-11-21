@@ -1,7 +1,7 @@
 <script>
 	import Heading from '$lib/organisms/Heading.svelte';
 
-	export let title, content;
+	let { title, content } = $props();
 </script>
 
 <section>

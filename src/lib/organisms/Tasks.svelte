@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import Heading from '$lib/organisms/Heading.svelte';
 
-	export let tasks;
+	let { tasks } = $props();
 
 	onMount(() => {
 		/* Firefox hack, :has() selector not supported */
