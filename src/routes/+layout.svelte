@@ -1,6 +1,13 @@
 <script>
 	import Nav from '$lib/organisms/Nav.svelte';
 	import Footer from '$lib/organisms/Footer.svelte';
+	/**
+	 * @typedef {Object} Props
+	 * @property {import('svelte').Snippet} [children]
+	 */
+
+	/** @type {Props} */
+	let { children } = $props();
 </script>
 
 <svelte:head>
@@ -10,7 +17,7 @@
 <Nav />
 
 <main>
-	<slot />
+	{@render children?.()}
 </main>
 
 <Footer />

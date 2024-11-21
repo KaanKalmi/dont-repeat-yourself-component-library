@@ -2,10 +2,9 @@
   import Semester from "$lib/molecules/Semester.svelte";
   import { onMount } from "svelte";
 
-  export let semesters;
-  export let subtitle;
+  let { semesters, subtitle } = $props();
 
-  let jsEnabled = false;
+  let jsEnabled = $state(false);
 
   function toggleDates({ target }) {
     if (target.nodeName == "INPUT") {
@@ -28,7 +27,7 @@
         type="checkbox"
         id="show-hide-dates"
         class="pacman"
-        on:change={toggleDates}
+        onchange={toggleDates}
       />
       <label for="show-hide-dates">
         <span> Show/hide full agenda </span>

@@ -2,7 +2,7 @@
   import Heading from "$lib/organisms/Heading.svelte";
   import SprintLink from "$lib/molecules/SprintLink.svelte";
 
-  export let semester, i;
+  let { semester, i = $bindable() } = $props();
 </script>
 
 <section class="semester green-on-blue">
