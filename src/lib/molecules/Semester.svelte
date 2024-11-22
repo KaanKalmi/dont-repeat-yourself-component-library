@@ -2,12 +2,13 @@
   import Heading from "$lib/organisms/Heading.svelte";
   import SprintLink from "$lib/molecules/SprintLink.svelte";
 
-  let { semester, i = $bindable() } = $props();
+  export let semester;
+  let i = 0;
 </script>
 
 <section class="semester green-on-blue">
   <a href="/{semester.slug}">
-    <Heading title="Semester {++i}:" subtitle={semester.title} />
+    <Heading title={`Semester ${++i}:`} subtitle={semester.title} />
   </a>
 
   <ol>
@@ -15,7 +16,7 @@
       <SprintLink
         {semester}
         {sprint}
-        nextSprint={index !== semester.sprints.length
+        nextSprint={index !== semester.sprints.length - 1
           ? semester.sprints[index + 1]
           : false}
       />
@@ -26,53 +27,35 @@
 <style>
   section.semester {
     padding: 0;
-    margin: 0 1.5rem 0;
-    scroll-margin: 1rem;
-
     border: none;
     scroll-snap-align: start;
   }
 
-  @media (max-width: 750px) {
-    section.semester {
-      width: 100%;
-      max-width: calc(100vw - 4rem);
-    }
-  }
-
-  :global(section.semester h2) {
-    line-height: 1.1;
-    font-size: 1.25rem;
-    margin-left: 1.25rem !important;
-  }
-
-  @media (max-width: 750px) {
-    :global(section.semester h2) {
-      font-size: 1.25rem;
-    }
-  }
-
-  :global(section.semester h2 > span) {
-    font-size: 0.6em;
-    letter-spacing: 0;
-    text-transform: uppercase;
-  }
-
-  section.semester > a {
+  section.semester a {
     color: var(--blueberry);
     text-decoration: none;
     display: inline-block;
     margin: 0 0 0.5rem;
   }
 
-  section.semester > a:focus {
+  section.semester a:focus {
     color: var(--blueberry);
   }
 
   ol {
     list-style: none;
-    margin: 1rem 0.25rem 0;
-    padding: 1rem;
+    padding: 0.5rem;
     width: 100%;
+  }
+
+  :global(section.semester h2) {
+    line-height: 1.1;
+    font-size: 1.25rem;
+  }
+
+  :global(section.semester h2 > span) {
+    font-size: 0.6em;
+    letter-spacing: 0;
+    text-transform: uppercase;
   }
 </style>
