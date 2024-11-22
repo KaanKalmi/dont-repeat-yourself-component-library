@@ -80,7 +80,7 @@
     );
     background-size: 200% 100%;
     background-position: right bottom;
-    transition: all .3s ease-in; 
+    transition: all 0.3s ease-in;
   }
 
   li a span {
