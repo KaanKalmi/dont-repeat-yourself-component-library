@@ -27,6 +27,7 @@
 <style>
   section.semester {
     padding: 0;
+
     border: none;
     scroll-snap-align: start;
   }
@@ -60,18 +61,23 @@
   }
 
   @media (min-width: 960px) {
-    section.semester {
-      padding: 0 1.25rem 2rem;
-    }
-
-    section.semester a {
-      margin: 0 0 1rem;
-    }
-
-    ol {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5em;
-    }
+    
+  section.semester > a {
+    color: var(--blueberry);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 0 0.5rem;
   }
+
+  section.semester > a:focus {
+    color: var(--blueberry);
+  }
+
+  ol {
+    list-style: none;
+    margin: 1rem 0.25rem 0;
+    padding: 1rem;
+    width: 100%;
+  }
+
 </style>
