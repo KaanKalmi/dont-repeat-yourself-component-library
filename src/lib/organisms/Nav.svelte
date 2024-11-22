@@ -208,8 +208,8 @@
 				}
 			}
 
-			.left{ margin-left: 6rem;
-
+			.left{ 
+				margin-left: 10rem;
 				.fdnd-logo{ height: 5rem; }
 			}
 
@@ -217,7 +217,7 @@
 
 				ul{
 					padding: .25em  3.5em;
-					gap: 3.5rem;
+					gap: 4rem;
 				
 					li{
 						a{ 
