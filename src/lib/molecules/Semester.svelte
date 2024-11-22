@@ -7,7 +7,7 @@
 
 <section class="semester green-on-blue">
   <a href="/{semester.slug}">
-  <Heading title="Semester {++i}:" subtitle={semester.title} />
+    <Heading title="Semester {++i}:" subtitle={semester.title} />
   </a>
 
   <ol>
@@ -26,7 +26,6 @@
 <style>
   section.semester {
     padding: 0;
-    margin: 0 1.5rem 0 0;
     scroll-margin: 1rem;
 
     border: none;
@@ -59,13 +58,15 @@
   }
 
   section.semester > a {
-		color: var(--blueberry);
-		text-decoration: none;
-		display: inline-block;
-		margin: 0 0 0.5rem;
-	}
+    color: var(--blueberry);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 0 0.5rem;
+  }
 
-	section.semester > a:focus { color: var(--blueberry); } 
+  section.semester > a:focus {
+    color: var(--blueberry);
+  }
 
   ol {
     list-style: none;
