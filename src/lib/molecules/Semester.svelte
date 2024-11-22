@@ -61,23 +61,22 @@
   }
 
   @media (min-width: 960px) {
-    
-  section.semester > a {
-    color: var(--blueberry);
-    text-decoration: none;
-    display: inline-block;
-    margin: 0 0 0.5rem;
-  }
+    section.semester > a {
+      color: var(--blueberry);
+      text-decoration: none;
+      display: inline-block;
+      margin: 0 0 0.5rem;
+    }
 
-  section.semester > a:focus {
-    color: var(--blueberry);
-  }
+    section.semester > a:focus {
+      color: var(--blueberry);
+    }
 
-  ol {
-    list-style: none;
-    margin: 1rem 0.25rem 0;
-    padding: 1rem;
-    width: 100%;
+    ol {
+      list-style: none;
+      margin: 1rem 0.25rem 0;
+      padding: 1rem;
+      width: 100%;
+    }
   }
-
 </style>
