@@ -5,7 +5,7 @@
 <main>
 	<h1>OOPS!</h1>
 	<p>
-		Looks like our students have taken <strong> "Website Destruction"</strong> to a whole new level
+		Looks like our students have taken <strong> "Website Destructuring"</strong> to a whole new level
 	</p>
 </main>
 
