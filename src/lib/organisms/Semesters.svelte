@@ -172,15 +172,19 @@
     margin-left: 0.8rem;
   }
 
-  @media (601px <= width) {
-    h2 {
-      margin: 0;
-      padding: 3rem 2.25rem 2rem;
+  @media (min-width: 600px) {
+    .scroll-horo {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2rem;
     }
   }
-  @media (1024px <= width) {
-    h2 {
-      padding: 4rem 3.25rem 2rem;
+
+  @media (min-width: 960px) {
+    .scroll-horo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
     }
   }
 </style>

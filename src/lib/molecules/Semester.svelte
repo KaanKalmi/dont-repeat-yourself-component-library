@@ -58,4 +58,20 @@
     letter-spacing: 0;
     text-transform: uppercase;
   }
+
+  @media (min-width: 960px) {
+    section.semester {
+      padding: 0 1.25rem 2rem;
+    }
+
+    section.semester a {
+      margin: 0 0 1rem;
+    }
+
+    ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5em;
+    }
+  }
 </style>
