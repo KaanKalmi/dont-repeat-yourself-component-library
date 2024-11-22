@@ -120,7 +120,6 @@
 
   section {
     position: relative;
-    width: 100%;
     padding: 0;
     background: var(--grey);
     color: var(--blueberry);
