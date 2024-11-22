@@ -2,7 +2,13 @@
   import Heading from "$lib/organisms/Heading.svelte";
   import Topics from "$lib/molecules/Topics.svelte";
 
-  export let title, sprintNumber, content, startdate, topics;
+  let {
+    title,
+    sprintNumber,
+    content,
+    startdate,
+    topics
+  } = $props();
 </script>
 
 <section>

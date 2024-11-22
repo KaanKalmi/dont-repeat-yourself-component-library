@@ -1,5 +1,5 @@
 <script>
-    export let topic
+    let { topic } = $props();
 </script>
 
 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" >

@@ -2,10 +2,9 @@
   import Semester from "$lib/molecules/Semester.svelte";
   import { onMount } from "svelte";
 
-  export let semesters;
-  export let subtitle;
+  let { semesters, subtitle } = $props();
 
-  let jsEnabled = false;
+  let jsEnabled = $state(true);
 
   function toggleDates({ target }) {
     if (target.nodeName == "INPUT") {
@@ -28,7 +27,7 @@
         type="checkbox"
         id="show-hide-dates"
         class="pacman"
-        on:change={toggleDates}
+        onchange={toggleDates}
       />
       <label for="show-hide-dates">
         <span> Show/hide full agenda </span>
@@ -78,7 +77,8 @@
     --speed: 0.5s;
   }
 
-  .pacman::before, .pacman::after {
+  .pacman::before,
+  .pacman::after {
     --rotation: 30deg;
     --translation: -100%;
     content: "";
@@ -108,7 +108,8 @@
       50% 0;
   }
 
-  .pacman:checked::before, .pacman:checked::after {
+  .pacman:checked::before,
+  .pacman:checked::after {
     --rotation: -30deg;
     left: calc(100% - 0.5em);
   }
@@ -122,7 +123,6 @@
     width: 100%;
     padding: 0;
     background: var(--grey);
-    border-radius: 0 0 15px 15px;
     color: var(--blueberry);
   }
 
@@ -134,7 +134,8 @@
     bottom: 0;
   }
 
-  .fixed-bar::before, .fixed-bar::after {
+  .fixed-bar::before,
+  .fixed-bar::after {
     content: "";
     position: absolute;
     width: 1.5em;
@@ -158,10 +159,8 @@
   }
 
   .scroll-horo {
-    overflow-x: auto;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-direction: column;
     scroll-snap-type: x mandatory;
     padding: 1rem 2rem 2rem;
   }
@@ -173,11 +172,19 @@
     margin-left: 0.8rem;
   }
 
-  @media (601px <= width) { 
-  h2 {
-    margin: 0;
-    padding: 3rem 2.25rem 2rem;
+  @media (min-width: 600px) {
+    .scroll-horo {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2rem;
+    }
   }
-}
-@media (1024px <= width) { h2{ padding: 4rem 3.25rem 2rem; } }
+
+  @media (min-width: 960px) {
+    .scroll-horo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+  }
 </style>
