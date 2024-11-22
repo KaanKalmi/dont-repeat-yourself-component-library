@@ -80,6 +80,10 @@
 			align-items: center;
 			margin: auto;
 
+			a:hover, a:focus{
+				transform: scale(1.1);
+			}
+
 			.fdnd-logo{
 				position: relative;
 				display: block;
@@ -134,6 +138,15 @@
 				box-shadow: 0.5em 0.5em 0 0 var(--grey);
 			}
 		}
+
+
+		a:hover, a:focus{
+			text-decoration: underline;
+		}
+
+		a:focus-visible{
+			outline: none;
+		}
 	}
 
 	@media (760px <= width) {
@@ -157,15 +170,16 @@
 
 			.left{ 
 
-				.fdnd-logo{ height: 4rem; }
+				.fdnd-logo{ height: 3.5rem; }
 			}
 
 			nav{
 				ul{
-					padding: 1.5em;
-					gap: 2.5rem;
+					align-items: center;
+					padding: .75em  2.5em;
+					gap: 3.5rem;
 				
-					li{ a{ font-weight: 500; } }
+					li{  a{ font-weight: 500; } }
 				}
 			}
 		}
@@ -199,10 +213,10 @@
 				.fdnd-logo{ height: 5rem; }
 			}
 
-			nav{ height: 100px;
+			nav{ 
 
 				ul{
-					padding: 2.5em;
+					padding: .25em  3.5em;
 					gap: 3.5rem;
 				
 					li{
