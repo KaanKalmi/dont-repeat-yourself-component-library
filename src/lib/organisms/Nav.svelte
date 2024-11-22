@@ -142,14 +142,9 @@
 		}
 	}
 
-	@keyframes up {
-		to { transform: translateY(0); }
-	}
-
 	@media (760px <= width) {
 		header {
-			.top{
-				.hva-logo{ width: 40%; }
+			.top{ .hva-logo{ width: 40%; }
 
 				p{
 					margin-left: 1em;
@@ -166,12 +161,9 @@
 				}
 			}
 
-			.left{
-				margin-left: 1em;
+			.left{ margin-left: 1em;
 
-				.fdnd-logo{
-					height: 4rem;
-				}
+				.fdnd-logo{ height: 4rem; }
 			}
 
 			nav{
@@ -179,9 +171,7 @@
 					padding: 1.5em;
 					gap: 2.5rem;
 				
-					li{
-						a{ font-weight: 500; }
-					}
+					li{ a{ font-weight: 500; } }
 				}
 			}
 		}
@@ -210,16 +200,13 @@
 				}
 			}
 
-			.left{
-				margin-left: 6rem;
+			.left{ margin-left: 6rem;
 
-				.fdnd-logo{
-					height: 5rem;
-				}
+				.fdnd-logo{ height: 5rem; }
 			}
 
-			nav{
-				height: 100px;
+			nav{ height: 100px;
+
 				ul{
 					padding: 2.5em;
 					gap: 3.5rem;
@@ -234,4 +221,6 @@
 			}
 		}
 	}
+
+	@keyframes up { to { transform: translateY(0); } }
 </style>
