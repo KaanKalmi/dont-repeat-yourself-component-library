@@ -155,7 +155,7 @@
 				}
 			}
 
-			.left{ margin-left: 1em;
+			.left{ 
 
 				.fdnd-logo{ height: 4rem; }
 			}
