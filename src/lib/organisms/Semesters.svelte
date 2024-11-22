@@ -184,7 +184,8 @@
     .scroll-horo {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
+      gap: 3rem;
+      padding: 2rem 3rem 2rem 1rem;
     }
   }
 </style>
