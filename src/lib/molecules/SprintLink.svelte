@@ -2,17 +2,15 @@
   import Heading from "$lib/organisms/Heading.svelte";
   import { prettyDate } from "$lib/utils/date";
 
-  export let semester;
-  export let sprint;
-  export let nextSprint;
+  let { semester, sprint, nextSprint } = $props();
 
   const today = new Date();
   const sprintDate = new Date(sprint.startdate);
   let nextSprintDate = nextSprint ? new Date(nextSprint.startdate) : false;
 
-  $: active =
-    today >= sprintDate && (!nextSprintDate || today < nextSprintDate);
-  $: past = nextSprintDate && today > nextSprintDate;
+  let active =
+    $derived(today >= sprintDate && (!nextSprintDate || today < nextSprintDate));
+  let past = $derived(nextSprintDate && today > nextSprintDate);
 </script>
 
 {#if sprint.sprintNumber}
@@ -41,8 +39,7 @@
 {/if}
 
 <style>
-  a:focus,
-  a:hover {
+  a:focus, a:hover {
     background-position: left bottom;
   }
 
@@ -114,13 +111,11 @@
     text-decoration: line-through;
   }
 
-  :global(li.past time),
-  :global(li.extra.past span) {
+  :global(li.past time), :global(li.extra.past span) {
     text-decoration: line-through;
   }
 
-  li a,
-  li > span {
+  li a, li > span {
     display: flex;
     white-space: nowrap;
     overflow: hidden;
@@ -164,8 +159,7 @@
   }
 
   @media (min-width: 25em) {
-    li a,
-    li span {
+    li a, li span {
       width: 100%;
     }
   }

@@ -22,20 +22,15 @@
   <h2>{subtitle}</h2>
 
   {#if jsEnabled}
-    <article class="agenda-container">
-      <input
-        type="checkbox"
-        id="show-hide-dates"
-        class="pacman"
-        onchange={toggleDates}
-      />
+    <form class="agenda-container">
       <label for="show-hide-dates">
-        <span> Show/hide full agenda </span>
+        <input type="checkbox" id="show-hide-dates" class="pacman" onchange={toggleDates}>
+        Show/hide full agenda
       </label>
-    </article>
+    </form>
   {/if}
 
-  <div class="scroll-horo">
+  <div class="semester-grid">
     {#each semesters as semester, i}
       <Semester {semester} {i} />
     {/each}
@@ -77,8 +72,7 @@
     --speed: 0.5s;
   }
 
-  .pacman::before,
-  .pacman::after {
+  .pacman::before, .pacman::after {
     --rotation: 30deg;
     --translation: -100%;
     content: "";
@@ -108,15 +102,12 @@
       50% 0;
   }
 
-  .pacman:checked::before,
-  .pacman:checked::after {
+  .pacman:checked::before, .pacman:checked::after {
     --rotation: -30deg;
     left: calc(100% - 0.5em);
   }
 
-  .pacman:checked::after {
-    --rotation: 30deg;
-  }
+  .pacman:checked::after { --rotation: 30deg; }
 
   section {
     position: relative;
@@ -133,8 +124,7 @@
     bottom: 0;
   }
 
-  .fixed-bar::before,
-  .fixed-bar::after {
+  .fixed-bar::before, .fixed-bar::after {
     content: "";
     position: absolute;
     width: 1.5em;
@@ -157,14 +147,14 @@
     padding: 3rem 1.25rem 2rem;
   }
 
-  .scroll-horo {
+  .semester-grid {
     display: flex;
     flex-direction: column;
     scroll-snap-type: x mandatory;
     padding: 1rem 2rem 2rem;
   }
 
-  label span {
+  label {
     color: var(--blueberry);
     font-size: 0.7rem;
     font-weight: 600;
@@ -172,15 +162,15 @@
   }
 
   @media (min-width: 600px) {
-    .scroll-horo {
+    .semester-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 2rem;
     }
   }
 
-  @media (min-width: 960px) {
-    .scroll-horo {
+  @media (min-width: 1250px) {
+    .semester-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1rem;

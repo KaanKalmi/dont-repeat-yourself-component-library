@@ -185,7 +185,7 @@
 		}
 	}
 	
-	@media (1024px <= width) {
+	@media (1025px <= width) {
 		header {
 			.top{
 				.hva-logo{ 
