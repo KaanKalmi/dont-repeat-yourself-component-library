@@ -113,10 +113,11 @@
 
   section > :global(h2) {
     padding-left: 1rem;
+    padding-bottom: 1rem
   }
 
   .week-container {
-    padding: 0 1rem 2rem;
+    padding: 2rem 1rem 2rem 1rem;
   }
 
   .week + .week {
@@ -196,7 +197,7 @@
     .week {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1em;
+      gap: 1.5em;
     }
 
     .day {

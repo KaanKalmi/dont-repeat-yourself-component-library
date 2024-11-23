@@ -35,6 +35,7 @@
   :global(section h2) {
     font-size: 2.25rem;
     padding: 0.25em;
+    padding-left: 1rem;
   }
 
   :global(section p) {

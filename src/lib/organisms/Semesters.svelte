@@ -46,12 +46,6 @@
     }
   }
 
-  .agenda-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
   .pacman {
     appearance: none;
     position: relative;
@@ -151,7 +145,7 @@
     display: flex;
     flex-direction: column;
     scroll-snap-type: x mandatory;
-    padding: 1rem 2rem 2rem;
+    padding: 1rem 2rem 2rem 4rem;
   }
 
   label {
@@ -174,6 +168,14 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1rem;
+    }
+
+    h2 {
+      padding-left: 4rem;
+    }
+
+    .agenda-container {
+      padding-left: 2rem;
     }
   }
 </style>
