@@ -27,7 +27,6 @@
 <style>
   section.semester {
     padding: 0;
-
     border: none;
     scroll-snap-align: start;
   }
@@ -74,8 +73,6 @@
 
     ol {
       list-style: none;
-      /* margin: 1rem 0.25rem 0; */
-      /* padding: 1rem; */
       width: 85%;
     }
   }

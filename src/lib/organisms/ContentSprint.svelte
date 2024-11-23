@@ -1,35 +1,31 @@
 <script>
   import Heading from "$lib/organisms/Heading.svelte";
   import Topics from "$lib/molecules/Topics.svelte";
+  import Tasks from "$lib/organisms/Tasks.svelte";
 
-  let {
-    title,
-    sprintNumber,
-    content,
-    startdate,
-    topics
-  } = $props();
+  let { title, sprintNumber, content, startdate, topics } = $props();
 </script>
 
 <section>
-<article>
-  <Heading title="Sprint {sprintNumber}: {title}" />
-  <Topics {startdate} {topics} />
+  <article>
+    <Heading title="Sprint {sprintNumber}: {title}" />
+    <Topics {startdate} {topics} />
 
-  <div>
-    {#if content}
-      {@html content.html}
-    {/if}
-  </div>
-</article>
+    <div>
+      {#if content}
+        {@html content.html}
+      {/if}
+    </div>
+  </article>
+  <!-- <Tasks /> -->
 </section>
 
 <style>
-  section{
+  section {
     background-color: var(--grey);
-    width: 100%;
+    width: 66%;
     border-radius: 15px 0 0 0;
-    
+
     article {
       position: relative;
       height: 100%;
@@ -48,8 +44,8 @@
   }
 
   article div {
-      margin-top: 1.5rem;
-    }
+    margin-top: 1.5rem;
+  }
 
   :global(article p) {
     font-size: 1rem;

@@ -2,6 +2,7 @@
   import Logo from "$lib/atoms/HvaPayoff.svelte";
 </script>
 
+<div class="fixed-bar"></div>
 <footer>
   <nav>
     <h2>Archief</h2>
@@ -35,6 +36,32 @@
 <Logo />
 
 <style>
+  .fixed-bar {
+    width: 100%;
+    height: 0.75em;
+    background: var(--lavender);
+    position: sticky;
+    bottom: 0;
+  }
+
+  .fixed-bar::before, .fixed-bar::after {
+    content: "";
+    position: absolute;
+    width: 1.5em;
+    aspect-ratio: 1;
+    left: 0;
+    border-radius: 0 0 50% 0;
+    bottom: 0.75em;
+    box-shadow: var(--rounded) var(--rounded) 0 var(--lavender);
+    transform: rotate(90deg);
+  }
+  
+  .fixed-bar::after {
+    right: 0;
+    left: unset;
+    transform: unset;
+  }
+
   footer {
     display: flex;
     justify-content: center;

@@ -106,9 +106,7 @@
 <style>
   section {
     padding: 2em;
-    margin: 1rem 0 0;
     background: var(--grey);
-    border-radius: 10px;
   }
 
   section > :global(h2) {

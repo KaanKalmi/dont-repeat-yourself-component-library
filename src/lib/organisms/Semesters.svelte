@@ -37,8 +37,6 @@
   </div>
 </section>
 
-<div class="fixed-bar"></div>
-
 <style>
   @keyframes waka_waka_waka {
     to {
@@ -110,32 +108,6 @@
     color: var(--blueberry);
   }
 
-  .fixed-bar {
-    width: 100%;
-    height: 0.75em;
-    background: var(--lavender);
-    position: sticky;
-    bottom: 0;
-  }
-
-  .fixed-bar::before, .fixed-bar::after {
-    content: "";
-    position: absolute;
-    width: 1.5em;
-    aspect-ratio: 1;
-    left: 0;
-    border-radius: 0 0 50% 0;
-    bottom: 0.75em;
-    box-shadow: 0.5em 0.5em 0 0 var(--lavender);
-    transform: rotate(90deg);
-  }
-
-  .fixed-bar::after {
-    right: 0;
-    left: unset;
-    transform: unset;
-  }
-
   h2 {
     margin: 0;
     padding: 3rem 1.25rem 2rem;
@@ -145,7 +117,7 @@
     display: flex;
     flex-direction: column;
     scroll-snap-type: x mandatory;
-    padding: 1rem 2rem 2rem 4rem;
+    padding: 1rem 2rem 2rem 2rem;
   }
 
   label {
