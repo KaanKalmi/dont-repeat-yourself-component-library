@@ -24,7 +24,12 @@
   {#if jsEnabled}
     <form class="agenda-container">
       <label for="show-hide-dates">
-        <input type="checkbox" id="show-hide-dates" class="pacman" onchange={toggleDates}>
+        <input
+          type="checkbox"
+          id="show-hide-dates"
+          class="pacman"
+          onchange={toggleDates}
+        />
         Show/hide full agenda
       </label>
     </form>
@@ -49,7 +54,7 @@
     position: relative;
     font-size: 1.5em;
     width: 3em;
-    margin-left: 3em;
+    margin-left: 1em;
     aspect-ratio: 3;
     border: max(1px, 0.05em) solid #fff;
     border-radius: 2em;
@@ -64,7 +69,8 @@
     --speed: 0.5s;
   }
 
-  .pacman::before, .pacman::after {
+  .pacman::before,
+  .pacman::after {
     --rotation: 30deg;
     --translation: -100%;
     content: "";
@@ -94,12 +100,15 @@
       50% 0;
   }
 
-  .pacman:checked::before, .pacman:checked::after {
+  .pacman:checked::before,
+  .pacman:checked::after {
     --rotation: -30deg;
     left: calc(100% - 0.5em);
   }
 
-  .pacman:checked::after { --rotation: 30deg; }
+  .pacman:checked::after {
+    --rotation: 30deg;
+  }
 
   section {
     position: relative;
@@ -110,14 +119,14 @@
 
   h2 {
     margin: 0;
-    padding: 3rem 1.25rem 2rem;
+    padding: 3rem 1.25rem 1.5rem;
   }
 
   .semester-grid {
     display: flex;
     flex-direction: column;
     scroll-snap-type: x mandatory;
-    padding: 1rem 2rem 2rem 2rem;
+    padding: 1rem 2rem 2rem 0rem;
   }
 
   label {
@@ -144,10 +153,6 @@
     }
 
     h2 {
-      padding-left: 4rem;
-    }
-
-    .agenda-container {
       padding-left: 2rem;
     }
   }

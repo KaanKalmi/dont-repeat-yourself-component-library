@@ -64,7 +64,6 @@
       color: var(--blueberry);
       text-decoration: none;
       display: inline-block;
-      margin: 0 0 0.5rem;
     }
 
     section.semester > a:focus {
@@ -74,7 +73,6 @@
     ol {
       list-style: none;
       width: 85%;
-
     }
   }
 </style>
