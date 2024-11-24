@@ -45,4 +45,10 @@
     max-width: 65ch;
     letter-spacing: -0.04em;
   }
+
+  @media (min-width: 750px) {
+    div {
+      width: max-content;
+    }
+  }
 </style>
