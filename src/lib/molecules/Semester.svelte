@@ -74,6 +74,7 @@
     ol {
       list-style: none;
       width: 85%;
+
     }
   }
 </style>
