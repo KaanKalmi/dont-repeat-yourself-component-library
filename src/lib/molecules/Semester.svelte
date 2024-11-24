@@ -2,8 +2,8 @@
   import Heading from "$lib/organisms/Heading.svelte";
   import SprintLink from "$lib/molecules/SprintLink.svelte";
 
-  export let semester;
-  let i = 0;
+  let { semester } = $props();
+  let i = $state(0);
 </script>
 
 <section class="semester green-on-blue">
@@ -27,7 +27,6 @@
 <style>
   section.semester {
     padding: 0;
-
     border: none;
     scroll-snap-align: start;
   }
@@ -74,9 +73,8 @@
 
     ol {
       list-style: none;
-      margin: 1rem 0.25rem 0;
-      padding: 1rem;
-      width: 100%;
+      width: 85%;
+
     }
   }
 </style>

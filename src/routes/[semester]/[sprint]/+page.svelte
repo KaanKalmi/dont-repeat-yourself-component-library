@@ -10,16 +10,19 @@
 
 <div>
 	<Content {title} {sprintNumber} {content} {startdate} {topics} />
+	<Tasks {tasks} />
 </div>
 
-<Tasks {tasks} />
 <Schedule {weekPlans} />
 
 <style>
 	div {
 		display: flex;
 		flex-direction: column;
+		align-items: baseline;
 		gap: 1.5rem;
+		background-color: var(--grey);
+		border-radius: var(--rounded) 0 0 0;
 	}
 
 	:global(section) {
@@ -44,7 +47,6 @@
 	@media (min-width: 40em) {
 		div {
 			flex-direction: row;
-			align-items: stretch;
 		}
 	}
 </style>

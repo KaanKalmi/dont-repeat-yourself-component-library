@@ -17,8 +17,7 @@
 </script>
 
 {#if tasks && tasks.length > 0}
-	<div>
-		<section class="green-on-blue rounded tasks">
+		<section class="tasks">
 			<Heading title="Leertaken" />
 
 			{#each tasks as task}
@@ -42,19 +41,22 @@
 				{/if}
 			{/each}
 		</section>
-	</div>
 {/if}
 
 <style>
-	div{
-		background-color: var(--grey);
-
 		section {
 			position: relative;
+			height: 100%;
+			width: 100%;
 			background-color: var(--grey);
+			color: black;
+			width: max-content;
 			border: 2px solid var(--turquoise);
 			border-radius: var(--rounded);
 			box-shadow: -4px 4px var(--lavender);
+			min-height: 18rem;
+			max-width: 35em;
+			padding: 1em;
 		}
 		
 		small { font-size: 0.7em; }
@@ -87,7 +89,6 @@
 			align-items: flex-end;
 			justify-content: space-between;
 		}
-	}
 
 	@media (max-width: 750px) { section.tasks { width: 100%; } }
 
