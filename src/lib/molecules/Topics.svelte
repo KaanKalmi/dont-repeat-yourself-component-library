@@ -50,7 +50,5 @@
     color: var(--blueberry);
   }
 
-  .rounded {
-    border-radius: 0.5rem;
-  }
+  .rounded { border-radius: var(--rounded); }
 </style>

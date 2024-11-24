@@ -7,19 +7,10 @@
 </script>
 
 <section class="semester green-on-blue">
-  <a href="/{semester.slug}">
-    <Heading title={`Semester ${++i}:`} subtitle={semester.title} />
-  </a>
-
+  <a href="/{semester.slug}"> <Heading title={`Semester ${++i}:`} subtitle={semester.title}/> </a>
   <ol>
     {#each semester.sprints as sprint, index}
-      <SprintLink
-        {semester}
-        {sprint}
-        nextSprint={index !== semester.sprints.length - 1
-          ? semester.sprints[index + 1]
-          : false}
-      />
+      <SprintLink {semester} {sprint} nextSprint={index !== semester.sprints.length - 1? semester.sprints[index + 1]: false}/>
     {/each}
   </ol>
 </section>
@@ -38,9 +29,7 @@
     margin: 0 0 0.5rem;
   }
 
-  section.semester a:focus {
-    color: var(--blueberry);
-  }
+  section.semester a:focus { color: var(--blueberry); }
 
   ol {
     list-style: none;
@@ -66,9 +55,7 @@
       display: inline-block;
     }
 
-    section.semester > a:focus {
-      color: var(--blueberry);
-    }
+    section.semester > a:focus { color: var(--blueberry); }
 
     ol {
       list-style: none;

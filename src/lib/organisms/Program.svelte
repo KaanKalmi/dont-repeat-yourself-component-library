@@ -47,8 +47,6 @@
   }
 
   @media (min-width: 750px) {
-    div {
-      width: max-content;
-    }
+    div { width: max-content; }
   }
 </style>

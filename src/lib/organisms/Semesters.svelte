@@ -24,12 +24,7 @@
   {#if jsEnabled}
     <form class="agenda-container">
       <label for="show-hide-dates">
-        <input
-          type="checkbox"
-          id="show-hide-dates"
-          class="pacman"
-          onchange={toggleDates}
-        />
+        <input type="checkbox" id="show-hide-dates" class="pacman" onchange={toggleDates} />
         Show/hide full agenda
       </label>
     </form>
@@ -69,8 +64,7 @@
     --speed: 0.5s;
   }
 
-  .pacman::before,
-  .pacman::after {
+  .pacman::before, .pacman::after {
     --rotation: 30deg;
     --translation: -100%;
     content: "";
@@ -100,15 +94,12 @@
       50% 0;
   }
 
-  .pacman:checked::before,
-  .pacman:checked::after {
+  .pacman:checked::before, .pacman:checked::after {
     --rotation: -30deg;
     left: calc(100% - 0.5em);
   }
 
-  .pacman:checked::after {
-    --rotation: 30deg;
-  }
+  .pacman:checked::after { --rotation: 30deg; }
 
   section {
     position: relative;
@@ -152,8 +143,6 @@
       padding: 2rem 3rem 2rem 1rem;
     }
 
-    h2 {
-      padding-left: 2rem;
-    }
+    h2 { padding-left: 2rem; }
   }
 </style>

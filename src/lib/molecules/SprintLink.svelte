@@ -1,5 +1,4 @@
 <script>
-  import Heading from "$lib/organisms/Heading.svelte";
   import { prettyDate } from "$lib/utils/date";
 
   let { semester, sprint, nextSprint } = $props();
@@ -8,18 +7,17 @@
   const sprintDate = new Date(sprint.startdate);
   let nextSprintDate = nextSprint ? new Date(nextSprint.startdate) : false;
 
-  let active =
-    $derived(today >= sprintDate && (!nextSprintDate || today < nextSprintDate));
+  let active = $derived( today >= sprintDate && (!nextSprintDate || today < nextSprintDate));
   let past = $derived(nextSprintDate && today > nextSprintDate);
 </script>
 
 {#if sprint.sprintNumber}
   <li class:active class:past>
     <a data-sveltekit-prefetch href="{semester.slug}/{sprint.slug}">
-      <span class:past>{sprint.sprintNumber}</span>
+      <span class:past> {sprint.sprintNumber} </span>
       <div>
-        <strong>{sprint.title}</strong>
-        <time class="rounded blue-on-green">
+        <strong> {sprint.title} </strong>
+        <time>
           {#if sprint.startdate}
             {prettyDate(sprint.startdate)}
           {/if}
@@ -29,8 +27,8 @@
   </li>
 {:else}
   <li class="extra" class:active class:past>
-    <span>{sprint.title}</span>
-    <time class="rounded blue-on-green">
+    <span> {sprint.title} </span>
+    <time>
       {#if sprint.startdate}
         {prettyDate(sprint.startdate)}
       {/if}
@@ -39,9 +37,7 @@
 {/if}
 
 <style>
-  a:focus, a:hover {
-    background-position: left bottom;
-  }
+  a:focus, a:hover { background-position: left bottom; }
 
   li {
     display: flex;
@@ -102,20 +98,17 @@
     padding-left: 0.5em;
   }
 
-  :global(li.past) {
-    opacity: 0.4;
-  }
+  :global(li.past) { opacity: 0.4; }
 
   :global(li.past strong) {
     font-weight: 500;
     text-decoration: line-through;
   }
 
-  :global(li.past time), :global(li.extra.past span) {
-    text-decoration: line-through;
-  }
+  :global(li.past time), :global(li.extra.past span) { text-decoration: line-through; }
 
-  li a, li > span {
+  li a,
+  li > span {
     display: flex;
     white-space: nowrap;
     overflow: hidden;
@@ -159,8 +152,6 @@
   }
 
   @media (min-width: 25em) {
-    li a, li span {
-      width: 100%;
-    }
+    li a, li span { width: 100%; }
   }
 </style>
