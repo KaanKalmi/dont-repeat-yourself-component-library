@@ -17,7 +17,6 @@
       {/if}
     </div>
   </article>
-  <!-- <Tasks /> -->
 </section>
 
 <style>
@@ -43,15 +42,7 @@
     }
   }
 
-  article div {
-    margin-top: 1.5rem;
-  }
-
-  :global(article p) {
-    font-size: 1rem;
-  }
-
-  :global(blockquote) {
-    font-size: 1rem;
-  }
+  article div { margin-top: 1.5rem; }
+  :global(article p) { font-size: 1rem; }
+  :global(blockquote) { font-size: 1rem; }
 </style>

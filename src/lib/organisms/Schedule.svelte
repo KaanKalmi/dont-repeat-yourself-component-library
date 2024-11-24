@@ -31,7 +31,7 @@
         newString += paragraph.replace(
           "<p>",
           `<p class="${classes}">`,
-          paragraph
+          paragraph,
         );
       });
     }
@@ -90,7 +90,7 @@
           {#each week as day, i}
             <div class="day day--{day.weekDay}">
               <h4 class="weekday">
-                {day.weekDay} <span>{prettyDate(day.date)}</span>
+                {day.weekDay} <span> {prettyDate(day.date)} </span>
               </h4>
               <div data-label="{day.weekDay} {prettyDate(day.date)}">
                 {@html day.content}
@@ -111,16 +111,12 @@
 
   section > :global(h2) {
     padding-left: 1rem;
-    padding-bottom: 1rem
+    padding-bottom: 1rem;
   }
 
-  .week-container {
-    padding: 2rem 1rem 2rem 1rem;
-  }
+  .week-container { padding: 2rem 1rem 2rem 1rem; }
 
-  .week + .week {
-    margin-top: 2rem;
-  }
+  .week + .week { margin-top: 2rem; }
 
   h3 {
     font-weight: normal;
@@ -151,9 +147,7 @@
     color: var(--blueberry);
   }
 
-  .day div {
-    margin-left: 0;
-  }
+  .day div { margin-left: 0; }
 
   .day :global(p) {
     --border: var(--white);
@@ -174,22 +168,11 @@
     opacity: 1;
   }
 
-  .day :global(.sprintplanning) {
-    --border: var(--lavender);
-  }
+  .day :global(.sprintplanning) { --border: var(--lavender); }
 
-  .day :global(.workshop) {
-    --border: var(--turquoise);
-  }
+  .day :global(.workshop) { --border: var(--turquoise); }
 
-  .day :global(.opdrachtgever),
-  .day :global(.code-review),
-  .day :global(.review),
-  .day :global(.retrospect),
-  .day :global(.kickoff),
-  .day :global(.wrap-up) {
-    --border: var(--call-to-action);
-  }
+  .day :global(.opdrachtgever), .day :global(.code-review), .day :global(.review), .day :global(.retrospect), .day :global(.kickoff), .day :global(.wrap-up) { --border: var(--call-to-action); }
 
   @media (min-width: 630px) {
     .week {
@@ -198,8 +181,6 @@
       gap: 1.5em;
     }
 
-    .day {
-      min-height: 17em;
-    }
+    .day { min-height: 17em; }
   }
 </style>
