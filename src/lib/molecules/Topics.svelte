@@ -28,21 +28,22 @@
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 0.5rem;
-    row-gap: 0.5rem;
+    column-gap: 0.25rem;
+    row-gap: 0.25rem;
   }
 
   aside ul li {
     list-style: none;
-    padding: 0.1rem 0.5rem;
+    padding: 0.1rem .25rem;
     white-space: nowrap;
     font-size: 0.8rem;
-    border-radius: 0.5rem;
+    font-weight: 600;
+    border-radius: var(--rounded);
     line-height: 1.5;
     display: flex;
-    background: var(--white);
-    border: 1px solid var(--turquoise);
-    color: var(--blueberry);
+    background: var(--turquoise);
+    border: 2px solid var(--turquoise);
+    color: black;
     border-radius: var(--rounded);
   }
 </style>

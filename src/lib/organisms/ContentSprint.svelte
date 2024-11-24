@@ -20,13 +20,9 @@
 <style>
   section {
     background-color: var(--grey);
-    width: 66%;
-    border-radius: var(--rounded) 0 0 0;
 
     article {
       position: relative;
-      height: 100%;
-      width: 100%;
       background-color: var(--white);
       color: black;
       width: max-content;
