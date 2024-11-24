@@ -35,7 +35,7 @@
   :global(main) {
     background-color: var(--grey);
     max-width: var(--max-width);
-    padding: 0 0 0 3rem;
+    padding: 0 0 0 1rem;
     border-radius: var(--rounded);
   }
 
@@ -56,5 +56,14 @@
   :global(footer nav p),
   :global(footer nav ul) {
     margin-left: 0.5rem;
+  }
+
+  @media (min-width: 700px) {
+    :global(main) {
+      background-color: var(--grey);
+      max-width: var(--max-width);
+      padding: 0 0 0 3rem;
+      border-radius: var(--rounded);
+    }
   }
 </style>
