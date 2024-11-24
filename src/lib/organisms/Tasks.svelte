@@ -34,7 +34,6 @@
   section {
     position: relative;
     height: 100%;
-    width: 100%;
     background-color: var(--white);
     color: black;
     width: max-content;
@@ -42,10 +41,8 @@
     border-radius: var(--rounded);
     box-shadow: -4px 4px var(--lavender);
     min-height: 18rem;
-    max-width: 35em;
-    padding: 1em;
-    max-width: 42rem;
-    padding: 1rem;
+    width: 35em;
+    padding: 1.25em 1.25em 0;
 
     p {
       display: flex;

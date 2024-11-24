@@ -25,10 +25,11 @@
 <style>
   aside ul {
     margin: 0;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     column-gap: 0.5rem;
-    row-gap: 0.1rem;
+    row-gap: 0.5rem;
   }
 
   aside ul li {

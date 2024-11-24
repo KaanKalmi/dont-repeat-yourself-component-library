@@ -1,7 +1,6 @@
 <script>
   import Heading from "$lib/organisms/Heading.svelte";
   import Topics from "$lib/molecules/Topics.svelte";
-  import Tasks from "$lib/organisms/Tasks.svelte";
 
   let { title, sprintNumber, content, startdate, topics } = $props();
 </script>
@@ -9,19 +8,19 @@
 <section>
   <article>
     <Heading title="Sprint {sprintNumber}: {title}" />
-    <Topics {startdate} {topics} />
     <div>
       {#if content}
         {@html content.html}
       {/if}
     </div>
+    <Topics {startdate} {topics} />
   </article>
 </section>
 
 <style>
   section {
     background-color: var(--grey);
-    width: 66%; /*DIT MOET K VERANDEREN*/
+    width: 66%;
     border-radius: var(--rounded) 0 0 0;
 
     article {
@@ -37,7 +36,7 @@
       margin-left: var(--shadow);
       min-height: 18rem;
       max-width: 35em;
-      padding: 1em;
+      padding: 1.25em;
     }
   }
 

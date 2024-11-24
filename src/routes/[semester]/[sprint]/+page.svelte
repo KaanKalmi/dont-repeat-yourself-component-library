@@ -20,25 +20,11 @@
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    gap: 1.5rem;
+    justify-content: space-between;
     background-color: var(--grey);
     border-radius: var(--rounded) 0 0 0;
+    padding: 3rem 0 2rem 0;
   }
-
-  :global(section) { padding: 1rem; }
-
-  :global(section h3) {
-    font-size: 1.2em;
-    margin-top: 3rem;
-    font-weight: normal;
-  }
-
-  :global(section ul) {
-    margin: 0;
-    list-style: none !important;
-  }
-
-  :global(section ul li) { list-style: none !important; }
 
   @media (min-width: 40em) {
     div { flex-direction: row; }
