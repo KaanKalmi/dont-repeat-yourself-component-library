@@ -33,17 +33,13 @@
   }
 
   aside ul li {
-    list-style: none;
     padding: 0.1rem .25rem;
-    white-space: nowrap;
     font-size: 0.8rem;
     font-weight: 600;
     border-radius: var(--rounded);
     line-height: 1.5;
     display: flex;
     background: var(--turquoise);
-    border: 2px solid var(--turquoise);
     color: black;
-    border-radius: var(--rounded);
   }
 </style>
