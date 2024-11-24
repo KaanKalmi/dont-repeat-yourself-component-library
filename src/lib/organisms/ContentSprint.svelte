@@ -25,7 +25,7 @@
       position: relative;
       background-color: var(--white);
       color: black;
-      width: max-content;
+      width: fit-content;
       border: 2px solid var(--turquoise);
       border-radius: var(--rounded);
       box-shadow: -4px 4px var(--lavender);

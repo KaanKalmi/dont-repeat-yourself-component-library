@@ -34,14 +34,14 @@
   section {
     position: relative;
     height: 100%;
+    width: 87%;
     background-color: var(--white);
     color: black;
-    width: max-content;
     border: 2px solid var(--turquoise);
     border-radius: var(--rounded);
     box-shadow: -4px 4px var(--lavender);
     min-height: 18rem;
-    width: 35em;
+    max-width: 35em;
     padding: 1.25em 1.25em 0;
 
     p {
@@ -71,6 +71,4 @@
     }
   }
 
-  @media (max-width: 750px) { section { width: 100%; } }
-  @media (min-width: 60em) { section { min-width: 26rem; } }
 </style>
