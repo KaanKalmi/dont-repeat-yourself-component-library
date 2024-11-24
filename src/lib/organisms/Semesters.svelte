@@ -22,27 +22,25 @@
   <h2>{subtitle}</h2>
 
   {#if jsEnabled}
-    <article class="agenda-container">
-      <input
-        type="checkbox"
-        id="show-hide-dates"
-        class="pacman"
-        onchange={toggleDates}
-      />
+    <form class="agenda-container">
       <label for="show-hide-dates">
-        <span> Show/hide full agenda </span>
+        <input
+          type="checkbox"
+          id="show-hide-dates"
+          class="pacman"
+          onchange={toggleDates}
+        />
+        Show/hide full agenda
       </label>
-    </article>
+    </form>
   {/if}
 
-  <div class="scroll-horo">
+  <div class="semester-grid">
     {#each semesters as semester, i}
       <Semester {semester} {i} />
     {/each}
   </div>
 </section>
-
-<div class="fixed-bar"></div>
 
 <style>
   @keyframes waka_waka_waka {
@@ -51,18 +49,12 @@
     }
   }
 
-  .agenda-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
   .pacman {
     appearance: none;
     position: relative;
     font-size: 1.5em;
     width: 3em;
-    margin-left: 3em;
+    margin-left: 1em;
     aspect-ratio: 3;
     border: max(1px, 0.05em) solid #fff;
     border-radius: 2em;
@@ -125,46 +117,19 @@
     color: var(--blueberry);
   }
 
-  .fixed-bar {
-    width: 100%;
-    height: 0.75em;
-    background: var(--lavender);
-    position: sticky;
-    bottom: 0;
-  }
-
-  .fixed-bar::before,
-  .fixed-bar::after {
-    content: "";
-    position: absolute;
-    width: 1.5em;
-    aspect-ratio: 1;
-    left: 0;
-    border-radius: 0 0 50% 0;
-    bottom: 0.75em;
-    box-shadow: 0.5em 0.5em 0 0 var(--lavender);
-    transform: rotate(90deg);
-  }
-
-  .fixed-bar::after {
-    right: 0;
-    left: unset;
-    transform: unset;
-  }
-
   h2 {
     margin: 0;
-    padding: 3rem 1.25rem 2rem;
+    padding: 3rem 1.25rem 1.5rem;
   }
 
-  .scroll-horo {
+  .semester-grid {
     display: flex;
     flex-direction: column;
     scroll-snap-type: x mandatory;
-    padding: 1rem 2rem 2rem;
+    padding: 1rem 2rem 2rem 0rem;
   }
 
-  label span {
+  label {
     color: var(--blueberry);
     font-size: 0.7rem;
     font-weight: 600;
@@ -172,18 +137,23 @@
   }
 
   @media (min-width: 600px) {
-    .scroll-horo {
+    .semester-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 2rem;
     }
   }
 
-  @media (min-width: 960px) {
-    .scroll-horo {
+  @media (min-width: 1250px) {
+    .semester-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
+      gap: 3rem;
+      padding: 2rem 3rem 2rem 1rem;
+    }
+
+    h2 {
+      padding-left: 2rem;
     }
   }
 </style>

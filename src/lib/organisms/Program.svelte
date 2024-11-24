@@ -1,7 +1,7 @@
 <script>
   import Heading from "$lib/organisms/Heading.svelte";
 
-	let { title, content } = $props();
+  let { title, content } = $props();
 </script>
 
 <section>
@@ -17,7 +17,7 @@
     background-color: var(--grey);
     color: var(--blueberry);
     border-radius: 15px 0 0 0;
-    padding: 3rem 1.25rem 2rem;
+    padding: 3rem 1.25rem 2rem 0rem;
 
     div {
       padding: 1.25em;
@@ -35,6 +35,7 @@
   :global(section h2) {
     font-size: 2.25rem;
     padding: 0.25em;
+    padding-left: 1rem;
   }
 
   :global(section p) {
@@ -44,17 +45,10 @@
     max-width: 65ch;
     letter-spacing: -0.04em;
   }
-  @media (601px <= width) {
-    section {
-      padding: 4rem 2.25rem 2rem;
-      div {
-        width: max-content;
-      }
-    }
-  }
-  @media (1024px <= width) {
-    section {
-      padding: 4rem 3.25rem 2rem;
+
+  @media (min-width: 750px) {
+    div {
+      width: max-content;
     }
   }
 </style>
