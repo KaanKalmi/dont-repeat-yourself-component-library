@@ -9,13 +9,13 @@
 <aside>
   <h3>Topics</h3>
   <ul>
-    <li class="blue-on-green rounded">
+    <li>
       {#if startdate}
         <IconCal date={longDate(startdate)} />
       {/if}
     </li>
     {#each topics as topic}
-      <li class="blue-on-green rounded">
+      <li>
         <IconTopic {topic} />
       </li>
     {/each}
@@ -42,15 +42,6 @@
     background: var(--white);
     border: 1px solid var(--turquoise);
     color: var(--blueberry);
-  }
-
-  .blue-on-green {
-    background: var(--white);
-    border: 1px solid var(--turquoise);
-    color: var(--blueberry);
-  }
-
-  .rounded {
-    border-radius: 0.5rem;
+    border-radius: var(--rounded);
   }
 </style>
