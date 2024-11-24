@@ -23,7 +23,7 @@
     {#each tasks as task}
       {#if task.forks && task.forks.length > 0}
         {#each task.forks as fork}
-          <li class="purple-on-blue shadow">
+          <li>
             <div class="repo">
               <span class="repo-title">{fork.title}</span>
               <IconStar stargazerCount={fork.stargazerCount} />
@@ -35,10 +35,8 @@
               </div>
             </div>
             <strong class="profile">
-              <img src={fork.avatarUrl} alt="" class="avatar" />
-              <a href={fork.ownerUrl} target="_blank" rel="noreferrer"
-                >@{fork.owner}</a
-              >
+              <img src={fork.avatarUrl} alt="" class="avatar"/>
+              <a href={fork.ownerUrl} target="_blank" rel="noreferrer"> @{fork.owner} </a>
             </strong>
           </li>
         {/each}

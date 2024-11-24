@@ -6,7 +6,7 @@
   let i = $state(0);
 </script>
 
-<section class="semester green-on-blue">
+<section class="semester">
   <a href="/{semester.slug}"> <Heading title={`Semester ${++i}:`} subtitle={semester.title}/> </a>
   <ol>
     {#each semester.sprints as sprint, index}

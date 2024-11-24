@@ -24,7 +24,7 @@
       {#if task.topic == "task"}
         <p>
           <a href={task.url} data-sveltekit-prefetch>{task.name}</a>
-          <small class="blue-on-green">{task.forkCount} forks</small>
+          <small>{task.forkCount} forks</small>
         </p>
         <p>{task.description}</p>
       {/if}
@@ -35,7 +35,7 @@
       {#if task.topic == "subtask"}
         <p>
           <a href={task.url} data-sveltekit-prefetch>{task.name}</a>
-          <small class="blue-on-green">{task.forkCount} forks</small>
+          <small>{task.forkCount} forks</small>
         </p>
         <p>{task.description}</p>
       {/if}

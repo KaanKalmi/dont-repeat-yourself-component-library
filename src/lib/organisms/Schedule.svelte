@@ -90,7 +90,7 @@
           {#each week as day, i}
             <div class="day day--{day.weekDay}">
               <h4 class="weekday">
-                {day.weekDay} <span>{prettyDate(day.date)}</span>
+                {day.weekDay} <span> {prettyDate(day.date)} </span>
               </h4>
               <div data-label="{day.weekDay} {prettyDate(day.date)}">
                 {@html day.content}
