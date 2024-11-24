@@ -1,25 +1,12 @@
 <script>
-  import { onMount } from "svelte";
   import Heading from "$lib/organisms/Heading.svelte";
 
   let { tasks } = $props();
-
-  onMount(() => {
-    /* Firefox hack, :has() selector not supported */
-    if (!CSS.supports("selector(html:has(body))")) {
-      const subtasks = document.querySelector(".tasks li");
-      const subtasksHeading = document.querySelector(".tasks h3.subtasks");
-      if (subtasks) {
-        subtasksHeading.style.display = "block";
-      }
-    }
-  });
 </script>
 
 {#if tasks && tasks.length > 0}
-  <section class="tasks">
+  <section>
     <Heading title="Leertaken" />
-
     {#each tasks as task}
       {#if task.topic == "task"}
         <p>
@@ -30,7 +17,7 @@
       {/if}
     {/each}
 
-    <h3 class="subtasks">Deeltaken</h3>
+    <Heading title="Deeltaken"/>
     {#each tasks as task}
       {#if task.topic == "subtask"}
         <p>
@@ -48,7 +35,7 @@
     position: relative;
     height: 100%;
     width: 100%;
-    background-color: var(--grey);
+    background-color: var(--white);
     color: black;
     width: max-content;
     border: 2px solid var(--turquoise);
@@ -57,75 +44,36 @@
     min-height: 18rem;
     max-width: 35em;
     padding: 1em;
-  }
-
-  small { font-size: 0.7em; }
-
-  section.tasks {
     max-width: 42rem;
     padding: 1rem;
+
+    p {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-top: 0.4em;
+
+      a {
+        text-transform: capitalize;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      small {
+        font-size: 0.7em;
+        margin-left: 0.25rem;
+        padding: 0 0.1rem;
+        transform: translateY(-5px);
+        white-space: nowrap;
+      }
+    }
   }
 
-  section.tasks a {
-    text-transform: capitalize;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
-  section.tasks small {
-    margin-left: 0.25rem;
-    padding: 0 0.1rem;
-    transform: translateY(-5px);
-    white-space: nowrap;
-  }
-
-  section.tasks p {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-
-  @media (max-width: 750px) {
-    section.tasks { width: 100%; }
-  }
-
-  section.tasks {
-    border-width: 1px;
-    border-style: solid;
-    margin-left: var(--shadow);
-  }
-
-  section.tasks p:nth-of-type(2n) { margin-bottom: 1em; }
-
-  :global(section.tasks *::selection) {
-    background-color: var(--turquoise);
-    color: var(--blueberry);
-  }
-
-  section.tasks::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: var(--shadow);
-    left: calc(var(--shadow) * -1);
-    right: var(--shadow);
-    bottom: calc(var(--shadow) * -1);
-    border: 1px solid currentColor;
-    border-radius: var(--rounded);
-  }
-
-  .tasks p { margin-top: 0.4em; }
-
-  :global(section.tasks h3.subtasks) { display: none; }
-
-  :global(section.tasks:has(p) h3), :global(section.show h3) { display: block !important; }
-
-  @media (min-width: 60em) {
-    section.tasks { min-width: 26rem; }
-  }
+  @media (max-width: 750px) { section { width: 100%; } }
+  @media (min-width: 60em) { section { min-width: 26rem; } }
 </style>

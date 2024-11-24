@@ -101,7 +101,7 @@
       display: flex;
       justify-content: space-between;
       margin: 0 0 0 auto;
-      box-shadow: 8px 0 var(--grey);
+      box-shadow: 0 6px var(--grey);
       
       ul {
         position: relative;

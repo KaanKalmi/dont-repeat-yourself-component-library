@@ -10,7 +10,6 @@
   <article>
     <Heading title="Sprint {sprintNumber}: {title}" />
     <Topics {startdate} {topics} />
-
     <div>
       {#if content}
         {@html content.html}
@@ -22,14 +21,14 @@
 <style>
   section {
     background-color: var(--grey);
-    width: 66%;
-    border-radius: 15px 0 0 0;
+    width: 66%; /*DIT MOET K VERANDEREN*/
+    border-radius: var(--rounded) 0 0 0;
 
     article {
       position: relative;
       height: 100%;
       width: 100%;
-      background-color: var(--grey);
+      background-color: var(--white);
       color: black;
       width: max-content;
       border: 2px solid var(--turquoise);
