@@ -1,57 +1,60 @@
 <script>
-	import Nav from '$lib/organisms/Nav.svelte';
-	import Footer from '$lib/organisms/Footer.svelte';
-	/**
-	 * @typedef {Object} Props
-	 * @property {import('svelte').Snippet} [children]
-	 */
+  import Nav from "$lib/organisms/Nav.svelte";
+  import Footer from "$lib/organisms/Footer.svelte";
+  /**
+   * @typedef {Object} Props
+   * @property {import('svelte').Snippet} [children]
+   */
 
-	/** @type {Props} */
-	let { children } = $props();
+  /** @type {Props} */
+  let { children } = $props();
 </script>
 
 <svelte:head>
-	<title>Frontend Design & Development | Programma</title>
+  <title>Frontend Design & Development | Programma</title>
 </svelte:head>
 
 <Nav />
 
 <main>
-	{@render children?.()}
+  {@render children?.()}
 </main>
 
 <Footer />
 
 <style>
-	:global(body) {
-		margin: 0 .75em;
-	}
+  :global(body) {
+    margin: 0 0.75em;
+    background-color: var(--lavender);
+  }
 
-	:global(body), :global(body main) {
-		display: block;
-		background-color: var(--lavender);
-	}
+  :global(body),
+  :global(body main) {
+    display: block;
+  }
+  :global(main) {
+    background-color: var(--grey);
+    max-width: var(--max-width);
+    padding: 0 0 0 3rem;
+    border-radius: var(--rounded);
+  }
 
-	:global(main) {
-		max-width: var(--max-width);
-		margin: auto;
-	}
+  :global(footer) {
+    margin: auto;
+    margin-top: 1rem;
+    max-width: var(--max-width);
+  }
 
-	:global(footer) {
-		margin: auto;
-		margin-top: 1rem;
-		max-width: var(--max-width);
-	}
+  :global(footer nav) {
+    padding: 1rem;
+  }
 
-	:global(footer nav) {
-		padding: 1rem;
-	}
+  :global(footer nav h2) {
+    margin: calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem;
+  }
 
-	:global(footer nav h2) {
-		margin: calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem;
-	}
-
-	:global(footer nav p), :global(footer nav ul) {
-		margin-left: .5rem;
-	}
+  :global(footer nav p),
+  :global(footer nav ul) {
+    margin-left: 0.5rem;
+  }
 </style>

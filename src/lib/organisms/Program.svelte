@@ -1,7 +1,7 @@
 <script>
   import Heading from "$lib/organisms/Heading.svelte";
 
-	let { title, content } = $props();
+  let { title, content } = $props();
 </script>
 
 <section>
@@ -46,16 +46,8 @@
     letter-spacing: -0.04em;
   }
   @media (601px <= width) {
-    section {
-      padding: 4rem 2.25rem 2rem;
-      div {
-        width: max-content;
-      }
-    }
-  }
-  @media (1024px <= width) {
-    section {
-      padding: 4rem 3.25rem 2rem;
+    div {
+      width: max-content;
     }
   }
 </style>
