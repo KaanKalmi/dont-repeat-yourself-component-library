@@ -1,6 +1,5 @@
 <script>
   import Heading from "$lib/organisms/Heading.svelte";
-
   let { title, content } = $props();
 </script>
 
@@ -21,6 +20,7 @@
 
     div {
       padding: 1.25em;
+      background-color: var(--white);
       border: 2px solid var(--turquoise);
       border-radius: var(--rounded);
       box-shadow: -4px 4px var(--lavender);

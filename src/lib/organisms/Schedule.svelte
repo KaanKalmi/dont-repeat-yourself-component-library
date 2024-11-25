@@ -1,19 +1,10 @@
 <script>
   import Heading from "$lib/organisms/Heading.svelte";
   import { prettyDate, longDate } from "$lib/utils/date.js";
-
   let { weekPlans } = $props();
-
   const checkKeywords = (content) => {
     const strings = [
-      "sprintplanning",
-      "kickoff",
-      "workshop",
-      "opdrachtgever",
-      "code review",
-      "retrospect ",
-      "wrap-up",
-      "review",
+      "sprintplanning", "kickoff", "workshop", "opdrachtgever", "code review", "retrospect ", "wrap-up", "review",
     ];
     let newString = "";
     if (content) {
@@ -22,20 +13,17 @@
         let toReplace = strings.filter((s) => {
           if (paragraph.toLowerCase().includes(s)) {
             return s
-              .replace("we ♥ web", "we love web", s)
-              .replaceAll(" ", "-", s);
+              .replace("we ♥ web", "we love web", s) .replaceAll(" ", "-", s);
           }
         });
         let classes = toReplace.join(" ");
         paragraph = "<p>" + paragraph;
         newString += paragraph.replace(
-          "<p>",
-          `<p class="${classes}">`,
+          "<p>", `<p class="${classes}">`,
           paragraph,
         );
       });
     }
-
     return newString;
   };
 
@@ -75,7 +63,6 @@
   function addDays(date, days) {
     var result = new Date(date);
     result.setDate(result.getDate() + days);
-
     return result;
   }
 </script>

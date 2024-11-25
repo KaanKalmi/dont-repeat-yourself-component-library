@@ -6,6 +6,5 @@ export async function client({ query, variables, fetch, endpoint, headers = {}})
 	})
 
 	const { data } = await response.json()
-
 	return data
 }

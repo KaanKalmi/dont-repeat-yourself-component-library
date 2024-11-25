@@ -1,12 +1,9 @@
 <script>
   import { prettyDate } from "$lib/utils/date";
-
   let { semester, sprint, nextSprint } = $props();
-
   const today = new Date();
   const sprintDate = new Date(sprint.startdate);
   let nextSprintDate = nextSprint ? new Date(nextSprint.startdate) : false;
-
   let active = $derived( today >= sprintDate && (!nextSprintDate || today < nextSprintDate));
   let past = $derived(nextSprintDate && today > nextSprintDate);
 </script>
@@ -98,7 +95,7 @@
     padding-left: 0.5em;
   }
 
-  :global(li.past) { opacity: 0.4; }
+  :global(li.past) { opacity: 0.5; }
 
   :global(li.past strong) {
     font-weight: 500;
@@ -107,8 +104,8 @@
 
   :global(li.past time), :global(li.extra.past span) { text-decoration: line-through; }
 
-  li a,
-  li > span {
+  span.past { color: var(--attention); }
+  li a, li > span {
     display: flex;
     white-space: nowrap;
     overflow: hidden;

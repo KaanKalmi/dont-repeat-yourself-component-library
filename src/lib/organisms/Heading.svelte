@@ -1,13 +1,5 @@
 <script>
-  /**
-   * @typedef {Object} Props
-   * @property {any} title
-   * @property {string} [subtitle]
-   */
-
-  /** @type {Props} */
   let { title, subtitle = "" } = $props();
-
   let id = title ? title .replace(/[^\w\s]/gi, "") .replace(/\s+/g, "-") .toLowerCase() : "";
 </script>
 

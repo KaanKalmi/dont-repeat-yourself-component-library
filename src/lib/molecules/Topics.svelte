@@ -2,7 +2,6 @@
   import { longDate } from "$lib/utils/date.js";
   import IconCal from "$lib/atoms/Calendar.svelte";
   import IconTopic from "$lib/atoms/Topic.svelte";
-
   let { startdate, topics } = $props();
 </script>
 
