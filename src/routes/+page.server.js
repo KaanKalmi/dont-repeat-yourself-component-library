@@ -2,7 +2,7 @@ import { client } from '$lib/utils/client'
 import getQueryProgram from '$lib/queries/program'
 import {loadingState} from '$lib/stores/program'
 
-export let csr=false
+// export let csr=false
 
 export const load = async () => {
     loadingState.set(true)
