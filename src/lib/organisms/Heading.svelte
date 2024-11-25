@@ -1,6 +1,4 @@
 <script>
-  import IconLink from "$lib/atoms/Link.svelte";
-
   /**
    * @typedef {Object} Props
    * @property {any} title
