@@ -27,12 +27,7 @@
 </section>
 
 <style>
-  @keyframes waka_waka_waka {
-    to {
-      transform: translate(-50%, var(--translation)) rotate(var(--rotation));
-    }
-  }
-
+  @keyframes waka_waka_waka { to { transform: translate(-50%, var(--translation)) rotate(var(--rotation)); } }
   .pacman {
     appearance: none;
     position: relative;
@@ -43,16 +38,11 @@
     border: max(1px, 0.05em) solid #fff;
     border-radius: 2em;
     box-sizing: content-box;
-    background:
-      linear-gradient(90deg, var(--lavender) 6em, #1230 0) -5.5em 0 / 9em 100%,
-      radial-gradient(circle, #fff 0.075em, #fff0 0.08em) 50% 0 / 0.4em 100%,
-      var(--lavender);
+    background: linear-gradient(90deg, var(--lavender) 6em, #1230 0) -5.5em 0 / 9em 100%, radial-gradient(circle, #fff 0.075em, #fff0 0.08em) 50% 0 / 0.4em 100%, var(--lavender);
     transition: background-position calc(var(--speed) * 4) linear;
-
     --waka-speed: 0.2s;
     --speed: 0.5s;
   }
-
   .pacman::before, .pacman::after {
     --rotation: 30deg;
     --translation: -100%;
@@ -69,53 +59,34 @@
     transition: left calc(var(--speed)) linear;
     animation: waka_waka_waka var(--waka-speed) alternate infinite;
   }
-
   .pacman::after {
     --rotation: -30deg;
     --translation: 0;
     border-radius: 50% / 0 0 100% 100%;
     transform-origin: 50% 0;
   }
-
-  .pacman:checked {
-    background-position:
-      2.5em 0,
-      50% 0;
-  }
-
-  .pacman:checked::before, .pacman:checked::after {
-    --rotation: -30deg;
-    left: calc(100% - 0.5em);
-  }
-
+  .pacman:checked { background-position: 2.5em 0, 50% 0; }
+  .pacman:checked::before, .pacman:checked::after { --rotation: -30deg; left: calc(100% - 0.5em); }
   .pacman:checked::after { --rotation: 30deg; }
-
   section {
     position: relative;
     padding: 0;
     background: var(--grey);
     color: var(--blueberry);
   }
-
-  h2 {
-    margin: 0;
-    padding: 3rem 1.25rem 1.5rem;
-  }
-
+  h2 { margin: 0; padding: 3rem 1.25rem 1.5rem; }
   .semester-grid {
     display: flex;
     flex-direction: column;
     scroll-snap-type: x mandatory;
     padding: 1rem 2rem 2rem 0rem;
   }
-
   label {
     color: var(--blueberry);
     font-size: 0.7rem;
     font-weight: 600;
     margin-left: 0.8rem;
   }
-
   @media (min-width: 600px) {
     .semester-grid {
       display: grid;
@@ -123,7 +94,6 @@
       gap: 2rem;
     }
   }
-
   @media (min-width: 1250px) {
     .semester-grid {
       display: grid;
@@ -131,7 +101,6 @@
       gap: 3rem;
       padding: 2rem 3rem 2rem 1rem;
     }
-
     h2 { padding-left: 2rem; }
   }
 </style>
