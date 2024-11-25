@@ -1,7 +1,6 @@
 <script>
   import Heading from "$lib/organisms/Heading.svelte";
   import Topics from "$lib/molecules/Topics.svelte";
-
   let { title, sprintNumber, content, startdate, topics } = $props();
 </script>
 

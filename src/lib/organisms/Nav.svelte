@@ -1,6 +1,5 @@
 <script>
   import { page } from "$app/stores";
-
   let navItems = [
     {
       href: "/static-web/look-and-feel",

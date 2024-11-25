@@ -1,21 +1,10 @@
 <script>
   import Semester from "$lib/molecules/Semester.svelte";
   import { onMount } from "svelte";
-
   let { semesters, subtitle } = $props();
-
   let jsEnabled = $state(true);
-
-  function toggleDates({ target }) {
-    if (target.nodeName == "INPUT") {
-      document.body.classList.toggle("expand");
-    }
-  }
-
-  onMount(() => {
-    jsEnabled = true;
-    document.body.classList.remove("expand");
-  });
+  function toggleDates({ target }) { if (target.nodeName == "INPUT") { document.body.classList.toggle("expand"); } }
+  onMount(() => { jsEnabled = true; document.body.classList.remove("expand"); });
 </script>
 
 <section class="semesters-sprints">

@@ -1,6 +1,5 @@
 <script>
   import Heading from "$lib/organisms/Heading.svelte";
-
   let { title, content } = $props();
 </script>
 
