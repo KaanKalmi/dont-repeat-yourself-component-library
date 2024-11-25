@@ -2,6 +2,7 @@
   import Heading from "$lib/organisms/Heading.svelte";
 
   let { tasks } = $props();
+  console.log(tasks);
 </script>
 
 {#if tasks && tasks.length > 0}
