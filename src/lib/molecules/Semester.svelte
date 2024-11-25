@@ -3,11 +3,10 @@
   import SprintLink from "$lib/molecules/SprintLink.svelte";
 
   let { semester } = $props();
-  let i = $state(0);
 </script>
 
 <section class="semester">
-  <a href="/{semester.slug}"> <Heading title={`Semester ${++i}:`} subtitle={semester.title}/> </a>
+  <a href="/{semester.slug}"> <Heading title={`Semester`} subtitle={semester.title}/> </a>
   <ol>
     {#each semester.sprints as sprint, index}
       <SprintLink {semester} {sprint} nextSprint={index !== semester.sprints.length - 1? semester.sprints[index + 1]: false}/>
