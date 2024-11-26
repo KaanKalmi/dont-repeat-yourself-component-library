@@ -13,7 +13,12 @@
   {#if jsEnabled}
     <form class="agenda-container">
       <label for="show-hide-dates">
-        <input type="checkbox" id="show-hide-dates" class="pacman" onchange={toggleDates} />
+        <input
+          type="checkbox"
+          id="show-hide-dates"
+          class="pacman"
+          onchange={toggleDates}
+        />
         Show/hide full agenda
       </label>
     </form>
@@ -43,6 +48,7 @@
     --waka-speed: 0.2s;
     --speed: 0.5s;
   }
+
   .pacman::before, .pacman::after {
     --rotation: 30deg;
     --translation: -100%;
@@ -59,15 +65,25 @@
     transition: left calc(var(--speed)) linear;
     animation: waka_waka_waka var(--waka-speed) alternate infinite;
   }
+  
   .pacman::after {
     --rotation: -30deg;
     --translation: 0;
     border-radius: 50% / 0 0 100% 100%;
     transform-origin: 50% 0;
   }
+  
   .pacman:checked { background-position: 2.5em 0, 50% 0; }
   .pacman:checked::before, .pacman:checked::after { --rotation: -30deg; left: calc(100% - 0.5em); }
   .pacman:checked::after { --rotation: 30deg; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pacman::before,
+    .pacman::after {
+      animation: none;
+    }
+  }
+
   section {
     position: relative;
     padding: 0;
