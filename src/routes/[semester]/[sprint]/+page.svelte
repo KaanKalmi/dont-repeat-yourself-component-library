@@ -2,7 +2,7 @@
   import Content from "$lib/organisms/ContentSprint.svelte";
   import Tasks from "$lib/organisms/Tasks.svelte";
   import Schedule from "$lib/organisms/Schedule.svelte";
-
+  // import StudentWork from "$lib/molecules/StudentWork.svelte";
   let { data } = $props();
 
   const { title, sprintNumber, startdate, content, weekPlans, topics, tasks } = data;
@@ -11,6 +11,7 @@
 <div>
   <Content {title} {sprintNumber} {content} {startdate} {topics} />
   <Tasks {tasks} />
+  <!-- <StudentWork /> Dit breekt de site, doordat alles als undefined terug komt en dus niet kan inladen-->
 </div>
 
 <Schedule {weekPlans} />
