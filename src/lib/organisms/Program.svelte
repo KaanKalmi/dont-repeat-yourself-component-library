@@ -15,7 +15,7 @@
     position: relative;
     background-color: var(--grey);
     color: var(--blueberry);
-    border-radius: 15px 0 0 0;
+    border-radius: var(--rounded) 0 0 0;
     padding: 3rem 1.25rem 2rem 0rem;
     div {
       padding: 1.25em;

@@ -9,32 +9,65 @@
 </script>
 
 <div>
-  <section>
-    <Heading title="Semester" subtitle={semester.title} />
-    <div>
-      <Content {semester} />
-      <section>
-        <h3>Sprints</h3>
-        <ol>
-          {#each semester.sprints as sprint}
-            <SprintLink {semester} {sprint}/>
-          {/each}
-        </ol>
-      </section>
-    </div>
-  </section>
+  <Heading title="Semester" subtitle={semester.title}/>
 </div>
+<section>
+  <div class="content-container">
+    <Content {semester} />
+  </div>
+    <article>
+      <h3>Sprints</h3>
+      <ol>
+        {#each semester.sprints as sprint}
+          <SprintLink {semester} {sprint}/>
+        {/each}
+      </ol>
+    </article>
+</section>
 
 <style>
-  ol { margin: 0; }
+  div{ padding-top: 3rem; }
 
-  section {
-    margin-top: 2rem;
-    padding: 1rem;
+  section{
+    display: flex;
+    flex-direction: column;
+
+    .content-container{ width: 100%; }
+    article{
+      h3{ margin-left: 2em; }
+      ol{ width: 90%; }
+    }
   }
 
-  section h3 { margin: 0 0 1rem; }
-  section > div { margin: 2rem -1rem; }
-  section > div section { margin: 0; }
-  div { max-width: 40em; }
+  @media (750px <=width){
+    section{
+      display: flex;
+      flex-direction: column;
+
+      .content-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      article{
+        h3{ margin-left: 2em; }
+      }
+    }
+  }
+
+  @media (1024px <= width){
+    section{
+      display: grid;
+      grid-template-areas: "content sprints";
+      grid-template-columns: 2fr 1fr;
+
+      .content-container{ grid-area: content; }
+      article{
+        h3{ margin-left: 2em; }
+        ol{ grid-area: sprints; }
+      }
+    }
+  }
 </style>
