@@ -8,33 +8,35 @@
   const semester = data;
 </script>
 
-<div>
-  <section>
-    <Heading title="Semester" subtitle={semester.title} />
-    <div>
-      <Content {semester} />
-      <section>
-        <h3>Sprints</h3>
-        <ol>
-          {#each semester.sprints as sprint}
-            <SprintLink {semester} {sprint}/>
-          {/each}
-        </ol>
-      </section>
-    </div>
-  </section>
-</div>
+<section>
+  <Heading title="Semester" subtitle={semester.title} />
+  <div>
+    <Content {semester} />
+  </div>
+    <article>
+      <h3>Sprints</h3>
+      <ol>
+        {#each semester.sprints as sprint}
+          <SprintLink {semester} {sprint}/>
+        {/each}
+      </ol>
+    </article>
+</section>
 
 <style>
-  ol { margin: 0; }
+  section{
+    padding-block: 3rem;
+      
+    div{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
 
-  section {
-    margin-top: 2rem;
-    padding: 1rem;
-  }
+      ol{
+        width: 40%;
+      }
+    }
 
-  section h3 { margin: 0 0 1rem; }
-  section > div { margin: 2rem -1rem; }
-  section > div section { margin: 0; }
-  div { max-width: 40em; }
 </style>
