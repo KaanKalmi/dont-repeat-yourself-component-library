@@ -19,8 +19,13 @@
     border: 2px solid var(--turquoise);
     border-radius: var(--rounded);
     box-shadow: -4px 4px var(--lavender);
-    max-width: 40%;
+    max-width: 100%;
 
     h3 { margin: 0 0 0.5rem; }
+  }
+  @media (750px <=width){
+    article {
+      max-width: 43%;
+    }
   }
 </style>

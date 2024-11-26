@@ -29,25 +29,44 @@
   div{ padding-top: 3rem; }
 
   section{
-    display: grid;
-    grid-template-areas: "content sprints";
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    flex-direction: column;
 
-    .content-container{
-      grid-area: content;
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
+    .content-container{ width: 100%; }
     article{
       h3{ margin-left: 2em; }
+      ol{ width: 90%; }
+    }
+  }
 
-      ol{
-        grid-area: sprints;
-        width: 80%;
+  @media (750px <=width){
+    section{
+      display: flex;
+      flex-direction: column;
+
+      .content-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      article{
+        h3{ margin-left: 2em; }
+      }
+    }
+  }
+
+  @media (1024px <= width){
+    section{
+      display: grid;
+      grid-template-areas: "content sprints";
+      grid-template-columns: 2fr 1fr;
+
+      .content-container{ grid-area: content; }
+      article{
+        h3{ margin-left: 2em; }
+        ol{ grid-area: sprints; }
       }
     }
   }
