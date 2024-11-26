@@ -8,9 +8,11 @@
   const semester = data;
 </script>
 
+<div>
+  <Heading title="Semester" subtitle={semester.title}/>
+</div>
 <section>
-  <Heading title="Semester" subtitle={semester.title} />
-  <div>
+  <div class="content-container">
     <Content {semester} />
   </div>
     <article>
@@ -24,19 +26,29 @@
 </section>
 
 <style>
+  div{ padding-top: 3rem; }
+
   section{
-    padding-block: 3rem;
-      
-    div{
+    display: grid;
+    grid-template-areas: "content sprints";
+    grid-template-columns: 2fr 1fr;
+
+    .content-container{
+      grid-area: content;
+      width: 100%;
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
+
+    article{
+      h3{ margin-left: 2em; }
 
       ol{
-        width: 40%;
+        grid-area: sprints;
+        width: 80%;
       }
     }
-
+  }
 </style>

@@ -2,14 +2,14 @@
   let { semester } = $props();
 </script>
 
-  <article>
-    <h3> Inhoud </h3>
-    {@html semester.content.html}
-  </article>
-  <article>
-    <h3> Leerresultaat </h3>
-    {@html semester.goal.html}
-  </article>
+<article>
+  <h3> Inhoud </h3>
+  {@html semester.content.html}
+</article>
+<article>
+  <h3> Leerresultaat </h3>
+  {@html semester.goal.html}
+</article>
 
 <style>
   article {
@@ -19,7 +19,7 @@
     border: 2px solid var(--turquoise);
     border-radius: var(--rounded);
     box-shadow: -4px 4px var(--lavender);
-    max-width: 45%;
+    max-width: 40%;
 
     h3 { margin: 0 0 0.5rem; }
   }
