@@ -1,20 +1,8 @@
 <script>
   import Heading from "$lib/components/Heading.svelte";
   import IconStar from "$lib/atoms/Star.svelte";
-  /**
-   * @typedef {Object} Props
-   * @property {boolean} [stargazer]
-   */
-
-  /** @type {Props} */
   let { stargazer = $bindable(false) } = $props();
-  if (tasks) {
-    tasks.forEach((task) => {
-      if (!stargazer && task.forks && task.forks.length > 0) {
-        stargazer = true;
-      }
-    });
-  }
+  if (tasks) { tasks.forEach((task) => { if (!stargazer && task.forks && task.forks.length > 0) { stargazer = true; } });}
 </script>
 
 <section class="showcase {stargazer ? 'stargazer' : ''}">
