@@ -7,7 +7,9 @@
   const sprintDate = new Date(sprint.startdate);
   let nextSprintDate = nextSprint ? new Date(nextSprint.startdate) : false;
 
-  let active = $derived( today >= sprintDate && (!nextSprintDate || today < nextSprintDate));
+  let active = $derived(
+    today >= sprintDate && (!nextSprintDate || today < nextSprintDate)
+  );
   let past = $derived(nextSprintDate && today > nextSprintDate);
 </script>
 
@@ -37,7 +39,10 @@
 {/if}
 
 <style>
-  a:focus, a:hover { background-position: left bottom; }
+  a:focus,
+  a:hover {
+    background-position: left bottom;
+  }
 
   li {
     display: flex;
@@ -73,6 +78,12 @@
     transition: all 0.3s ease-in;
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    li a {
+      transition: none;
+    }
+  }
+
   li a span {
     display: flex;
     align-items: center;
@@ -98,14 +109,19 @@
     padding-left: 0.5em;
   }
 
-  :global(li.past) { opacity: 0.4; }
+  :global(li.past) {
+    opacity: 0.4;
+  }
 
   :global(li.past strong) {
     font-weight: 500;
     text-decoration: line-through;
   }
 
-  :global(li.past time), :global(li.extra.past span) { text-decoration: line-through; }
+  :global(li.past time),
+  :global(li.extra.past span) {
+    text-decoration: line-through;
+  }
 
   li a,
   li > span {
@@ -152,6 +168,9 @@
   }
 
   @media (min-width: 25em) {
-    li a, li span { width: 100%; }
+    li a,
+    li span {
+      width: 100%;
+    }
   }
 </style>
