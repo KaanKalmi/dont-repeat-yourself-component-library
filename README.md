@@ -6,10 +6,8 @@ Het programma van FDND is te bekijken op https://programma.fdnd.nl/. Hier is inf
 
 ## Screenshot
 De website live bekijken kan ook! Klik hiervoor op de link: [https://fdnd-programma.netlify.app/](https://fdnd-programma-s16.netlify.app/)  
-> DIT WERKT NIET
 
-![image](https://github.com/user-attachments/assets/2a4d2efe-84f9-43ca-b9de-3f3e553d4c23)
-
+![image](https://github.com/user-attachments/assets/8b02d733-98d2-45e9-83c6-6c7356bd148a)
 
 ## Beschrijving
 De Programma pagina moet een rework krijgen, hierbij gaan wij een nieuw design toepassen en hierbij de code refactoren. Denk bij een grote refactor aan het maken van componenten, het opschonen van ongebruikte code etc. Ook wilt de opdrachtgever graag dat we de database switchen van Hygraph naar Directus. De FDND Programma pagina is bedoelt voor studenten, docenten, gastsprekers en partners van de studie FDND. Hier kunnen ze alle informatie vinden over het curriculum van FDND.
